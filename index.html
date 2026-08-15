@@ -6,9 +6,10 @@
 
 <title>Ankur Kumar | Automotive & EV Quality Professional</title>
 
-<meta name="description" content="Ankur Kumar - Automotive & EV Quality Engineer">
+<meta name="description" content="Ankur Kumar - Automotive & EV Quality Professional">
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -17,32 +18,35 @@
 }
 
 :root{
-    --navy:#071a2f;
-    --blue:#0878c9;
-    --light-blue:#eaf6ff;
-    --text:#17202a;
-    --muted:#64748b;
-    --white:#ffffff;
-    --bg:#f5f8fc;
-    --border:#e2e8f0;
+    --white:#FFFFFF;
+    --slate:#5C7C89;
+    --teal:#1F4959;
+    --navy:#011425;
+    --light:#f4f8fa;
+    --border:#d9e4e8;
+    --soft:#eaf1f4;
+    --text:#172a33;
+    --muted:#647780;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:"Inter","Segoe UI",Arial,Helvetica,sans-serif;
     color:var(--text);
-    background:var(--bg);
+    background:var(--light);
     line-height:1.6;
 }
 
-/* NAVIGATION */
+/* =========================
+   NAVIGATION
+========================= */
 
 .navbar{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(7,26,47,.96);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(255,255,255,.1);
+    background:rgba(1,20,37,.97);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.10);
 }
 
 .nav-container{
@@ -58,10 +62,11 @@ body{
     display:flex;
     align-items:center;
     gap:10px;
-    color:white;
+    color:var(--white);
     text-decoration:none;
-    font-weight:bold;
+    font-weight:700;
     font-size:18px;
+    letter-spacing:.2px;
 }
 
 .brand img{
@@ -77,24 +82,30 @@ body{
 }
 
 .nav-links a{
-    color:#dce8f5;
+    color:#dce6ea;
     text-decoration:none;
     font-size:14px;
+    font-weight:500;
     transition:.2s;
 }
 
 .nav-links a:hover{
-    color:#55baff;
+    color:#ffffff;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
     min-height:88vh;
+
     background:
-        radial-gradient(circle at 85% 20%,rgba(8,120,201,.25),transparent 30%),
-        linear-gradient(135deg,#06182c,#0b3153);
-    color:white;
+        radial-gradient(circle at 85% 20%,rgba(92,124,137,.30),transparent 30%),
+        radial-gradient(circle at 15% 80%,rgba(31,73,89,.35),transparent 30%),
+        linear-gradient(135deg,#011425,#1F4959);
+
+    color:var(--white);
     display:flex;
     align-items:center;
 }
@@ -104,6 +115,7 @@ body{
     width:100%;
     margin:auto;
     padding:80px 25px;
+
     display:grid;
     grid-template-columns:1.4fr .8fr;
     gap:60px;
@@ -111,11 +123,11 @@ body{
 }
 
 .hero-small{
-    color:#63c1ff;
-    font-weight:bold;
+    color:#b8ccd3;
+    font-weight:700;
     letter-spacing:2px;
     text-transform:uppercase;
-    font-size:14px;
+    font-size:13px;
     margin-bottom:12px;
 }
 
@@ -123,10 +135,12 @@ body{
     font-size:60px;
     line-height:1.05;
     margin-bottom:15px;
+    font-weight:750;
+    letter-spacing:-1.5px;
 }
 
 .hero h2{
-    color:#9bd8ff;
+    color:#d7e5e9;
     font-size:28px;
     font-weight:500;
     margin-bottom:22px;
@@ -134,7 +148,7 @@ body{
 
 .hero p{
     max-width:700px;
-    color:#d9e6f2;
+    color:#d5e1e5;
     font-size:17px;
 }
 
@@ -148,30 +162,33 @@ body{
 .btn{
     display:inline-flex;
     align-items:center;
+    justify-content:center;
     gap:8px;
     padding:13px 21px;
     border-radius:8px;
     text-decoration:none;
-    font-weight:bold;
-    transition:.2s;
+    font-weight:650;
+    transition:.25s;
+    cursor:pointer;
 }
 
 .btn-primary{
-    background:white;
+    background:var(--white);
     color:var(--navy);
 }
 
 .btn-primary:hover{
     transform:translateY(-2px);
+    box-shadow:0 8px 22px rgba(0,0,0,.18);
 }
 
 .btn-outline{
-    border:1px solid #7fcfff;
-    color:white;
+    border:1px solid #b7cbd2;
+    color:var(--white);
 }
 
 .btn-outline:hover{
-    background:#0878c9;
+    background:rgba(255,255,255,.10);
 }
 
 .hero-photo{
@@ -182,11 +199,11 @@ body{
 .hero-photo::before{
     content:"";
     position:absolute;
-    width:340px;
-    height:340px;
+    width:350px;
+    height:350px;
     border-radius:50%;
-    background:#0878c9;
-    opacity:.18;
+    background:#5C7C89;
+    opacity:.22;
     left:50%;
     top:50%;
     transform:translate(-50%,-50%);
@@ -198,11 +215,15 @@ body{
     height:330px;
     object-fit:cover;
     border-radius:50%;
-    border:5px solid rgba(255,255,255,.9);
-    box-shadow:0 20px 60px rgba(0,0,0,.35);
+    border:6px solid rgba(255,255,255,.96);
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.35),
+        0 0 0 10px rgba(255,255,255,.06);
 }
 
-/* GENERAL */
+/* =========================
+   GENERAL
+========================= */
 
 section{
     padding:85px 25px;
@@ -219,9 +240,9 @@ section{
 }
 
 .section-heading span{
-    color:var(--blue);
+    color:var(--slate);
     font-size:13px;
-    font-weight:bold;
+    font-weight:750;
     letter-spacing:2px;
     text-transform:uppercase;
 }
@@ -230,6 +251,8 @@ section{
     color:var(--navy);
     font-size:36px;
     margin-top:6px;
+    font-weight:750;
+    letter-spacing:-.5px;
 }
 
 .section-heading p{
@@ -237,7 +260,9 @@ section{
     margin-top:8px;
 }
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .about-grid{
     display:grid;
@@ -248,46 +273,95 @@ section{
 
 .about-text{
     font-size:16px;
-    color:#445267;
+    color:#445b64;
 }
 
 .about-text p{
     margin-bottom:18px;
 }
 
+/* PROFESSIONAL SNAPSHOT */
+
 .about-card{
-    background:white;
-    border:1px solid var(--border);
-    border-radius:16px;
+    background:
+        radial-gradient(circle at 90% 10%,rgba(92,124,137,.25),transparent 28%),
+        linear-gradient(145deg,#011425,#1F4959);
+
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:18px;
     padding:30px;
-    box-shadow:0 12px 35px rgba(15,40,70,.07);
+
+    box-shadow:
+        0 18px 45px rgba(1,20,37,.18);
+
+    color:var(--white);
+    position:relative;
+    overflow:hidden;
 }
 
 .about-card h3{
-    color:var(--navy);
+    color:var(--white);
     margin-bottom:20px;
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:.2px;
 }
 
 .info-row{
     display:flex;
     justify-content:space-between;
+    align-items:center;
     gap:20px;
-    padding:12px 0;
-    border-bottom:1px solid var(--border);
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
 }
 
 .info-row:last-child{
     border-bottom:0;
 }
 
-.info-row strong{
-    color:var(--navy);
+.info-label{
+    display:flex;
+    align-items:center;
+    gap:11px;
 }
 
-/* CAREER */
+.info-icon{
+    width:34px;
+    height:34px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.14);
+
+    border-radius:9px;
+    font-size:16px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.10);
+}
+
+.info-row strong{
+    color:#ffffff;
+    font-size:14px;
+    font-weight:650;
+}
+
+.info-row > span:last-child{
+    color:#d2e1e6;
+    font-size:14px;
+    font-weight:500;
+    text-align:right;
+}
+
+/* =========================
+   CAREER
+========================= */
 
 .career{
-    background:white;
+    background:var(--white);
 }
 
 .timeline{
@@ -303,7 +377,7 @@ section{
     top:0;
     bottom:0;
     width:2px;
-    background:#cbd5e1;
+    background:#c6d4d9;
     transform:translateX(-50%);
 }
 
@@ -327,8 +401,8 @@ section{
     width:15px;
     height:15px;
     border-radius:50%;
-    background:var(--blue);
-    border:4px solid #dff2ff;
+    background:var(--teal);
+    border:4px solid #dce8ec;
     top:35px;
     z-index:2;
 }
@@ -342,7 +416,7 @@ section{
 }
 
 .company-card{
-    background:#f8fbff;
+    background:#f8fbfc;
     border:1px solid var(--border);
     border-radius:14px;
     padding:22px;
@@ -356,7 +430,7 @@ section{
 
 .company-card:hover{
     transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(15,40,70,.09);
+    box-shadow:0 12px 30px rgba(1,20,37,.09);
 }
 
 .company-logo{
@@ -372,12 +446,13 @@ section{
 .company-card h3{
     color:var(--navy);
     font-size:21px;
+    font-weight:700;
 }
 
 .date{
-    color:var(--blue);
+    color:var(--slate);
     font-size:13px;
-    font-weight:bold;
+    font-weight:700;
     margin:4px 0;
 }
 
@@ -386,7 +461,9 @@ section{
     font-size:14px;
 }
 
-/* EXPERIENCE */
+/* =========================
+   EXPERIENCE
+========================= */
 
 .experience-grid{
     display:grid;
@@ -395,38 +472,41 @@ section{
 }
 
 .experience-card{
-    background:white;
+    background:var(--white);
     border:1px solid var(--border);
     border-radius:14px;
     padding:27px;
-    box-shadow:0 8px 25px rgba(15,40,70,.05);
+    box-shadow:0 8px 25px rgba(1,20,37,.05);
 }
 
 .experience-card h3{
     color:var(--navy);
     margin-bottom:5px;
+    font-weight:700;
 }
 
 .experience-card .role{
-    color:var(--blue);
-    font-weight:bold;
+    color:var(--slate);
+    font-weight:700;
     font-size:14px;
     margin-bottom:15px;
 }
 
 .experience-card ul{
     padding-left:20px;
-    color:#526174;
+    color:#52656d;
 }
 
 .experience-card li{
     margin-bottom:7px;
 }
 
-/* SKILLS */
+/* =========================
+   SKILLS
+========================= */
 
 .skills-section{
-    background:#eef6fc;
+    background:#edf4f6;
 }
 
 .skills{
@@ -436,12 +516,12 @@ section{
 }
 
 .skill{
-    background:white;
+    background:var(--white);
     border:1px solid var(--border);
     padding:22px 12px;
     border-radius:12px;
     text-align:center;
-    font-weight:bold;
+    font-weight:700;
     color:var(--navy);
     transition:.2s;
 }
@@ -452,11 +532,13 @@ section{
 }
 
 .skill:hover{
-    border-color:#75c8fa;
+    border-color:#8aa5af;
     transform:translateY(-3px);
 }
 
-/* CERTIFICATIONS */
+/* =========================
+   CERTIFICATIONS
+========================= */
 
 .cert-grid{
     display:grid;
@@ -465,7 +547,7 @@ section{
 }
 
 .cert{
-    background:white;
+    background:var(--white);
     border:1px solid var(--border);
     padding:25px;
     border-radius:14px;
@@ -479,6 +561,7 @@ section{
 .cert h3{
     color:var(--navy);
     font-size:18px;
+    font-weight:700;
 }
 
 .cert p{
@@ -487,11 +570,13 @@ section{
     margin-top:7px;
 }
 
-/* CV */
+/* =========================
+   CV
+========================= */
 
 .cv-section{
-    background:linear-gradient(135deg,#0878c9,#07538e);
-    color:white;
+    background:linear-gradient(135deg,#1F4959,#011425);
+    color:var(--white);
     text-align:center;
 }
 
@@ -501,28 +586,30 @@ section{
 }
 
 .cv-section p{
-    color:#dceeff;
+    color:#d5e3e7;
     margin-bottom:25px;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
     background:var(--navy);
-    color:white;
+    color:var(--white);
 }
 
 .contact .section-heading h2{
-    color:white;
+    color:var(--white);
 }
 
 .contact .section-heading p{
-    color:#b9c9d9;
+    color:#b9c9cf;
 }
 
 .contact-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(4,1fr);
     gap:20px;
 }
 
@@ -530,8 +617,14 @@ section{
     border:1px solid rgba(255,255,255,.12);
     background:rgba(255,255,255,.05);
     border-radius:13px;
-    padding:25px;
+    padding:25px 18px;
     text-align:center;
+    transition:.25s;
+}
+
+.contact-card:hover{
+    transform:translateY(-4px);
+    background:rgba(255,255,255,.08);
 }
 
 .contact-icon{
@@ -540,26 +633,36 @@ section{
 }
 
 .contact-card h3{
-    margin-bottom:5px;
+    margin-bottom:7px;
+    font-size:17px;
 }
 
 .contact-card a{
-    color:#6fc8ff;
+    color:#c8e1e8;
     text-decoration:none;
     word-break:break-word;
+    font-size:14px;
 }
 
-/* FOOTER */
+.contact-card a:hover{
+    color:#ffffff;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-    background:#04101e;
-    color:#8fa2b5;
+    background:#000d18;
+    color:#8fa4ae;
     text-align:center;
     padding:22px;
     font-size:13px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:850px){
 
@@ -643,15 +746,72 @@ footer{
         left:3px;
         right:auto;
     }
+
+    .info-row{
+        gap:12px;
+    }
+
+    .info-row > span:last-child{
+        max-width:55%;
+    }
 }
+
+@media(max-width:500px){
+
+    section{
+        padding:65px 18px;
+    }
+
+    .hero-container{
+        padding:60px 18px;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero h2{
+        font-size:22px;
+    }
+
+    .hero-photo img{
+        width:220px;
+        height:220px;
+    }
+
+    .hero-photo::before{
+        width:240px;
+        height:240px;
+    }
+
+    .section-heading h2{
+        font-size:29px;
+    }
+
+    .skills{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about-card{
+        padding:22px;
+    }
+
+    .info-row{
+        flex-direction:row;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <header class="navbar">
+
 <div class="nav-container">
 
 <a href="#home" class="brand">
@@ -670,10 +830,13 @@ footer{
 </nav>
 
 </div>
+
 </header>
 
 
-<!-- HOME -->
+<!-- =========================
+     HOME
+========================= -->
 
 <section class="hero" id="home">
 
@@ -681,16 +844,19 @@ footer{
 
 <div>
 
-<div class="hero-small">Automotive • EV • Quality Professional</div>
+<div class="hero-small">
+Automotive • EV • Quality Professional
+</div>
 
 <h1>Ankur Kumar</h1>
 
 <h2>Automotive & EV Quality Professional</h2>
 
 <p>
-I am a Quality Professional with more than 8 years of experience
-in automotive manufacturing, Supplier Quality, Customer Quality,
-New Product Development and practical problem-solving.
+I am an Automotive Quality Professional with more than 8 years
+of experience in automotive manufacturing, Supplier Quality,
+Customer Quality, New Product Development and practical
+problem-solving.
 </p>
 
 <div class="hero-buttons">
@@ -699,8 +865,10 @@ New Product Development and practical problem-solving.
 View My Experience
 </a>
 
-<a href="./Ankur-Kumar-CV.pdf" class="btn btn-primary" target="_blank">
-    📄 Download CV
+<a href="./Ankur-Kumar-CV.pdf"
+class="btn btn-primary"
+target="_blank">
+📄 Download CV
 </a>
 
 </div>
@@ -708,7 +876,10 @@ View My Experience
 </div>
 
 <div class="hero-photo">
-<img src="profile.png" alt="Ankur Kumar">
+
+<img src="profile.png"
+alt="Ankur Kumar">
+
 </div>
 
 </div>
@@ -716,16 +887,24 @@ View My Experience
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
 <div class="container">
 
 <div class="section-heading">
+
 <span>About Me</span>
+
 <h2>My Professional Profile</h2>
-<p>A practical approach to automotive quality and problem-solving.</p>
+
+<p>
+A practical approach to automotive quality and problem-solving.
+</p>
+
 </div>
 
 <div class="about-grid">
@@ -733,7 +912,7 @@ View My Experience
 <div class="about-text">
 
 <p>
-I am a Automotive Quality professional with experience across
+I am an Automotive Quality professional with experience across
 automotive and EV manufacturing. My work has covered Supplier Quality,
 Customer Quality, New Product Development, process validation,
 audits and quality improvement.
@@ -753,59 +932,106 @@ the problem from happening again.
 
 </div>
 
+
+<!-- PROFESSIONAL SNAPSHOT -->
+
 <div class="about-card">
 
 <h3>Professional Snapshot</h3>
 
 <div class="info-row">
+
+<span class="info-label">
+<span class="info-icon">🚗</span>
 <strong>Industry</strong>
+</span>
+
 <span>Automotive & EV</span>
+
 </div>
 
+
 <div class="info-row">
+
+<span class="info-label">
+<span class="info-icon">⏱️</span>
 <strong>Experience</strong>
+</span>
+
 <span>8+ Years</span>
+
 </div>
 
+
 <div class="info-row">
+
+<span class="info-label">
+<span class="info-icon">⚙️</span>
 <strong>Core Area</strong>
+</span>
+
 <span>Quality Engineering</span>
+
 </div>
 
+
 <div class="info-row">
+
+<span class="info-label">
+<span class="info-icon">🎯</span>
 <strong>Quality Focus</strong>
+</span>
+
 <span>Supplier & Customer Quality</span>
+
 </div>
+
 
 <div class="info-row">
+
+<span class="info-label">
+<span class="info-icon">🔧</span>
 <strong>Products</strong>
+</span>
+
 <span>Automotive Components</span>
-</div>
 
 </div>
 
 </div>
+
+</div>
+
 </div>
 
 </section>
 
 
-<!-- CAREER -->
+<!-- =========================
+     CAREER
+========================= -->
 
 <section class="career" id="career">
 
 <div class="container">
 
 <div class="section-heading">
+
 <span>Career Journey</span>
+
 <h2>My Professional Journey</h2>
-<p>Experience across automotive and EV products.</p>
+
+<p>
+Experience across automotive and EV products.
+</p>
+
 </div>
 
 <div class="timeline">
 
 
 <div class="timeline-item">
+
 <div class="timeline-dot"></div>
 
 <div class="company-card">
@@ -814,7 +1040,7 @@ the problem from happening again.
 class="company-logo"
 alt="India Japan Lighting">
 
-<h3>India Japan Lighting Pvt Ltd..</h3>
+<h3>India Japan Lighting Pvt Ltd.</h3>
 
 <div class="date">
 18-Oct-2024 – Present
@@ -825,10 +1051,12 @@ Automotive Lighting Solutions
 </div>
 
 </div>
+
 </div>
 
 
 <div class="timeline-item">
+
 <div class="timeline-dot"></div>
 
 <div class="company-card">
@@ -837,7 +1065,7 @@ Automotive Lighting Solutions
 class="company-logo"
 alt="Sterling E-Mobility">
 
-<h3>Sterling E-Mobility Ltd..</h3>
+<h3>Sterling E-Mobility Ltd.</h3>
 
 <div class="date">
 22-May-2023 – 16-Oct-2024
@@ -848,10 +1076,12 @@ EV Motor Control Units
 </div>
 
 </div>
+
 </div>
 
 
 <div class="timeline-item">
+
 <div class="timeline-dot"></div>
 
 <div class="company-card">
@@ -860,7 +1090,7 @@ EV Motor Control Units
 class="company-logo"
 alt="Hitachi Astemo">
 
-<h3>Hitachi Astemo Rajasthan Brake Systems Pvt. Ltd..</h3>
+<h3>Hitachi Astemo Rajasthan Brake Systems Pvt. Ltd.</h3>
 
 <div class="date">
 10-Oct-2019 – 12-May-2023
@@ -871,10 +1101,12 @@ Disk Brake Assembly
 </div>
 
 </div>
+
 </div>
 
 
 <div class="timeline-item">
+
 <div class="timeline-dot"></div>
 
 <div class="company-card">
@@ -883,7 +1115,7 @@ Disk Brake Assembly
 class="company-logo"
 alt="Meenakshi Polymers">
 
-<h3>Meenakshi Polymers Pvt Ltd..</h3>
+<h3>Meenakshi Polymers Pvt Ltd.</h3>
 
 <div class="date">
 06-Dec-2017 – 09-Oct-2019
@@ -894,10 +1126,12 @@ Automotive Seating Solutions
 </div>
 
 </div>
+
 </div>
 
 
 <div class="timeline-item">
+
 <div class="timeline-dot"></div>
 
 <div class="company-card">
@@ -906,7 +1140,7 @@ Automotive Seating Solutions
 class="company-logo"
 alt="Somic ZF">
 
-<h3>Somic ZF Components Pvt Ltd..</h3>
+<h3>Somic ZF Components Pvt Ltd.</h3>
 
 <div class="date">
 06-Dec-2017 – 30-Nov-2018
@@ -917,24 +1151,34 @@ Steering System
 </div>
 
 </div>
+
 </div>
 
 </div>
+
 </div>
 
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- =========================
+     EXPERIENCE
+========================= -->
 
 <section id="experience">
 
 <div class="container">
 
 <div class="section-heading">
+
 <span>Professional Experience</span>
+
 <h2>What I Work On</h2>
-<p>Practical quality activities from my professional experience.</p>
+
+<p>
+Practical quality activities from my professional experience.
+</p>
+
 </div>
 
 <div class="experience-grid">
@@ -949,12 +1193,19 @@ Customer Quality Assurance
 </div>
 
 <ul>
+
 <li>Customer complaint handling and quality analysis.</li>
+
 <li>Warranty return and field failure investigation.</li>
+
 <li>8D, 5 Why, FTA and root cause analysis.</li>
+
 <li>Customer audit and quality support.</li>
+
 <li>New Product Development support.</li>
+
 <li>Coordination with Production, Supplier Quality and R&D.</li>
+
 </ul>
 
 </div>
@@ -969,11 +1220,17 @@ Supplier Quality Assurance & New Model
 </div>
 
 <ul>
+
 <li>Supplier quality activities for EV components.</li>
+
 <li>PPAP review and supplier documentation.</li>
+
 <li>Supplier development and process improvement.</li>
+
 <li>Process and product quality monitoring.</li>
+
 <li>4M Change, SST, Layout and capability review.</li>
+
 </ul>
 
 </div>
@@ -988,11 +1245,17 @@ Supplier Quality & New Part Development
 </div>
 
 <ul>
+
 <li>Supplier development and process validation.</li>
+
 <li>New part development and localization.</li>
+
 <li>Supplier inspection and audit activities.</li>
+
 <li>Customer requirement evaluation.</li>
+
 <li>Technical problem-solving and quality improvement.</li>
+
 </ul>
 
 </div>
@@ -1007,53 +1270,127 @@ Early Career Experience
 </div>
 
 <ul>
+
 <li>Steering system components.</li>
+
 <li>Automotive seating solutions.</li>
+
 <li>Manufacturing and inspection activities.</li>
+
 <li>Practical exposure to automotive quality requirements.</li>
+
 </ul>
 
 </div>
 
 </div>
+
 </div>
 
 </section>
 
 
-<!-- SKILLS -->
+<!-- =========================
+     SKILLS
+========================= -->
 
 <section class="skills-section" id="skills">
 
 <div class="container">
 
 <div class="section-heading">
+
 <span>Skills & Expertise</span>
+
 <h2>Quality Tools & Engineering Skills</h2>
-<p>Tools I use for quality improvement and problem-solving.</p>
+
+<p>
+Tools I use for quality improvement and problem-solving.
+</p>
+
 </div>
 
 <div class="skills">
 
-<div class="skill"><div class="skill-icon">📋</div>APQP</div>
-<div class="skill"><div class="skill-icon">📑</div>PPAP</div>
-<div class="skill"><div class="skill-icon">⚙️</div>FMEA</div>
-<div class="skill"><div class="skill-icon">📊</div>SPC</div>
+<div class="skill">
+<div class="skill-icon">📋</div>
+APQP
+</div>
 
-<div class="skill"><div class="skill-icon">📐</div>MSA</div>
-<div class="skill"><div class="skill-icon">🔧</div>8D Problem Solving</div>
-<div class="skill"><div class="skill-icon">🔍</div>Root Cause Analysis</div>
-<div class="skill"><div class="skill-icon">👥</div>Customer Quality</div>
+<div class="skill">
+<div class="skill-icon">📑</div>
+PPAP
+</div>
 
-<div class="skill"><div class="skill-icon">🏭</div>Supplier Quality</div>
-<div class="skill"><div class="skill-icon">✅</div>IATF 16949</div>
-<div class="skill"><div class="skill-icon">📈</div>Supplier Development</div>
-<div class="skill"><div class="skill-icon">🧪</div>Process Validation</div>
+<div class="skill">
+<div class="skill-icon">⚙️</div>
+FMEA
+</div>
 
-<div class="skill"><div class="skill-icon">📏</div>GD&T</div>
-<div class="skill"><div class="skill-icon">🔬</div>Failure Analysis</div>
-<div class="skill"><div class="skill-icon">📝</div>Quality Audits</div>
-<div class="skill"><div class="skill-icon">💡</div>Problem Solving</div>
+<div class="skill">
+<div class="skill-icon">📊</div>
+SPC
+</div>
+
+<div class="skill">
+<div class="skill-icon">📐</div>
+MSA
+</div>
+
+<div class="skill">
+<div class="skill-icon">🔧</div>
+8D Problem Solving
+</div>
+
+<div class="skill">
+<div class="skill-icon">🔍</div>
+Root Cause Analysis
+</div>
+
+<div class="skill">
+<div class="skill-icon">👥</div>
+Customer Quality
+</div>
+
+<div class="skill">
+<div class="skill-icon">🏭</div>
+Supplier Quality
+</div>
+
+<div class="skill">
+<div class="skill-icon">✅</div>
+IATF 16949
+</div>
+
+<div class="skill">
+<div class="skill-icon">📈</div>
+Supplier Development
+</div>
+
+<div class="skill">
+<div class="skill-icon">🧪</div>
+Process Validation
+</div>
+
+<div class="skill">
+<div class="skill-icon">📏</div>
+GD&T
+</div>
+
+<div class="skill">
+<div class="skill-icon">🔬</div>
+Failure Analysis
+</div>
+
+<div class="skill">
+<div class="skill-icon">📝</div>
+Quality Audits
+</div>
+
+<div class="skill">
+<div class="skill-icon">💡</div>
+Problem Solving
+</div>
 
 </div>
 
@@ -1062,54 +1399,104 @@ Early Career Experience
 </section>
 
 
-<!-- CERTIFICATIONS -->
+<!-- =========================
+     CERTIFICATIONS
+========================= -->
 
 <section id="certifications">
 
 <div class="container">
 
 <div class="section-heading">
+
 <span>Certifications</span>
+
 <h2>Training & Certifications</h2>
-<p>Professional quality-related learning and training.</p>
+
+<p>
+Professional quality-related learning and training.
+</p>
+
 </div>
 
 <div class="cert-grid">
 
+
 <div class="cert">
+
 <div class="cert-icon">🏆</div>
+
 <h3>Six Sigma Green Belt</h3>
-<p>Quality improvement and structured problem-solving training.</p>
+
+<p>
+Quality improvement and structured problem-solving training.
+</p>
+
 </div>
 
+
 <div class="cert">
+
 <div class="cert-icon">📋</div>
+
 <h3>Core Quality Tools</h3>
-<p>APQP, PPAP, FMEA, SPC and MSA related training.</p>
+
+<p>
+APQP, PPAP, FMEA, SPC and MSA related training.
+</p>
+
 </div>
 
+
 <div class="cert">
+
 <div class="cert-icon">⚙️</div>
+
 <h3>IATF 16949</h3>
-<p>Automotive Quality Management System related knowledge and training.</p>
+
+<p>
+Automotive Quality Management System related knowledge and training.
+</p>
+
 </div>
 
+
 <div class="cert">
+
 <div class="cert-icon">🔍</div>
+
 <h3>Root Cause Analysis</h3>
-<p>8D, 5 Why, FTA and practical problem-solving methods.</p>
+
+<p>
+8D, 5 Why, FTA and practical problem-solving methods.
+</p>
+
 </div>
 
+
 <div class="cert">
+
 <div class="cert-icon">🏭</div>
+
 <h3>Supplier Quality</h3>
-<p>Supplier development, audits and process improvement activities.</p>
+
+<p>
+Supplier development, audits and process improvement activities.
+</p>
+
 </div>
 
+
 <div class="cert">
+
 <div class="cert-icon">📚</div>
+
 <h3>Other Professional Training</h3>
-<p>Additional automotive quality and manufacturing related training.</p>
+
+<p>
+Additional automotive quality and manufacturing related training.
+</p>
+
 </div>
 
 </div>
@@ -1119,7 +1506,9 @@ Early Career Experience
 </section>
 
 
-<!-- CV -->
+<!-- =========================
+     CV
+========================= -->
 
 <section class="cv-section">
 
@@ -1143,22 +1532,32 @@ target="_blank">
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="contact" id="contact">
 
 <div class="container">
 
 <div class="section-heading">
+
 <span>Contact</span>
+
 <h2>Let's Connect</h2>
+
 <p>
 I am open to connecting with recruiters, hiring managers
 and professionals from the automotive and EV industry.
 </p>
+
 </div>
 
+
 <div class="contact-grid">
+
+
+<!-- EMAIL -->
 
 <div class="contact-card">
 
@@ -1172,6 +1571,8 @@ ankurkumar0941@gmail.com
 
 </div>
 
+
+<!-- LINKEDIN -->
 
 <div class="contact-card">
 
@@ -1187,6 +1588,23 @@ View LinkedIn Profile
 </div>
 
 
+<!-- PHONE -->
+
+<div class="contact-card">
+
+<div class="contact-icon">📞</div>
+
+<h3>Phone</h3>
+
+<a href="tel:+919461797767">
++91-9461797767
+</a>
+
+</div>
+
+
+<!-- CV -->
+
 <div class="contact-card">
 
 <div class="contact-icon">📄</div>
@@ -1200,12 +1618,17 @@ View CV
 
 </div>
 
+
 </div>
 
 </div>
 
 </section>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
