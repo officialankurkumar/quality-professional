@@ -1,1002 +1,2158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ankur Kumar | Automotive & EV Quality Professional</title>
 
-<meta name="description" content="Ankur Kumar - Automotive & EV Quality Professional">
+<meta name="description"
+content="Ankur Kumar - Automotive & EV Quality Professional with 8+ years of experience in Supplier Quality, Customer Quality, New Product Development and Process Excellence.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/lucide@latest"></script>
 
 <style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --navy:#071a35;
+    --navy2:#0d2749;
+
+    --blue:#1769e0;
+    --blue2:#2788ef;
+    --cyan:#19b8d5;
+
+    --white:#ffffff;
+    --soft:#f7fbff;
+    --ice:#eef7ff;
+
+    --text:#17243a;
+    --muted:#64748b;
+
+    --border:#dce7f2;
+
+    --shadow:0 18px 50px rgba(7,32,67,.08);
+    --shadow-hover:0 28px 70px rgba(7,32,67,.15);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
-:root{
-    --white:#FFFFFF;
-    --slate:#5C7C89;
-    --teal:#1F4959;
-    --navy:#011425;
-    --light:#f4f8fa;
-    --border:#d9e4e8;
-    --soft:#eaf1f4;
-    --text:#172a33;
-    --muted:#647780;
-}
-
 body{
-    font-family:"Inter","Segoe UI",Arial,Helvetica,sans-serif;
+    font-family:Inter,sans-serif;
     color:var(--text);
-    background:var(--light);
-    line-height:1.6;
+    background:#fff;
+    line-height:1.7;
+    overflow-x:hidden;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+h1,h2,h3,h4{
+    font-family:Manrope,sans-serif;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+button,
+input,
+textarea{
+    font-family:inherit;
+}
+
+.container{
+    width:min(1200px,92%);
+    margin:auto;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
 
 .navbar{
-    position:sticky;
+    position:fixed;
     top:0;
+    left:0;
+    width:100%;
     z-index:1000;
-    background:rgba(1,20,37,.97);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid rgba(255,255,255,.10);
+
+    background:rgba(255,255,255,.90);
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(220,231,242,.8);
+
+    transition:.3s;
 }
 
-.nav-container{
-    max-width:1200px;
-    margin:auto;
-    padding:13px 25px;
+.nav-inner{
+    height:76px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
 
-.brand{
+.logo{
     display:flex;
     align-items:center;
-    gap:10px;
-    color:var(--white);
-    text-decoration:none;
-    font-weight:700;
-    font-size:18px;
-    letter-spacing:.2px;
+    gap:11px;
+
+    color:var(--navy);
+    font-weight:800;
 }
 
-.brand img{
-    width:40px;
-    height:40px;
+.logo-mark{
+    width:43px;
+    height:43px;
+
+    overflow:hidden;
+    border-radius:12px;
+
+    background:#fff;
+    border:1px solid #dbe7f2;
+
+    box-shadow:0 5px 18px rgba(7,32,67,.08);
+}
+
+.logo-mark img{
+    width:100%;
+    height:100%;
     object-fit:contain;
-    border-radius:50%;
+}
+
+.logo small{
+    display:block;
+
+    color:var(--muted);
+
+    font-size:9px;
+    letter-spacing:.8px;
 }
 
 .nav-links{
     display:flex;
-    gap:24px;
+    align-items:center;
+    gap:18px;
 }
 
 .nav-links a{
-    color:#dce6ea;
-    text-decoration:none;
-    font-size:14px;
-    font-weight:500;
-    transition:.2s;
+    color:#435269;
+
+    font-size:12px;
+    font-weight:700;
+
+    transition:.25s;
 }
 
 .nav-links a:hover{
-    color:#ffffff;
+    color:var(--blue);
 }
 
-/* =========================
-   HERO
-========================= */
+.download-nav{
+    padding:10px 16px;
 
-.hero{
-    min-height:88vh;
+    color:#fff !important;
 
-    background:
-        radial-gradient(circle at 85% 20%,rgba(92,124,137,.30),transparent 30%),
-        radial-gradient(circle at 15% 80%,rgba(31,73,89,.35),transparent 30%),
-        linear-gradient(135deg,#011425,#1F4959);
+    border-radius:10px;
 
-    color:var(--white);
-    display:flex;
-    align-items:center;
+    background:var(--navy);
 }
 
-.hero-container{
-    max-width:1200px;
-    width:100%;
-    margin:auto;
-    padding:80px 25px;
+.menu-btn{
+    display:none;
 
-    display:grid;
-    grid-template-columns:1.4fr .8fr;
-    gap:60px;
-    align-items:center;
+    color:var(--navy);
+
+    border:0;
+    background:none;
+
+    cursor:pointer;
 }
 
-.hero-small{
-    color:#b8ccd3;
-    font-weight:700;
-    letter-spacing:2px;
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+section{
+    position:relative;
+    padding:105px 0;
+}
+
+.section-label{
+    margin-bottom:10px;
+
+    text-align:center;
+
+    color:var(--blue);
+
+    font-size:17px;
+    font-weight:800;
+
     text-transform:uppercase;
-    font-size:13px;
-    margin-bottom:12px;
+
+    letter-spacing:2px;
 }
 
-.hero h1{
-    font-size:60px;
-    line-height:1.05;
-    margin-bottom:15px;
-    font-weight:750;
+.section-title{
+    text-align:center;
+
+    color:var(--navy);
+
+    font-size:43px;
+
+    line-height:1.15;
+
     letter-spacing:-1.5px;
 }
 
-.hero h2{
-    color:#d7e5e9;
-    font-size:28px;
-    font-weight:500;
-    margin-bottom:22px;
+.section-subtitle{
+    max-width:850px;
+
+    margin:15px auto 50px;
+
+    text-align:center;
+
+    color:var(--muted);
+
+    font-size:14px;
 }
 
-.hero p{
-    max-width:700px;
-    color:#d5e1e5;
-    font-size:17px;
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(35px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
 }
 
-.hero-buttons{
+.reveal.active{
+    opacity:1;
+    transform:none;
+}
+
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.float-card{
+    transition:
+        transform .35s cubic-bezier(.2,.8,.2,1),
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+.float-card:hover{
+    box-shadow:var(--shadow-hover);
+    border-color:#afd2f4;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:790px;
+
+    padding-top:125px;
+
     display:flex;
-    gap:14px;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(23,105,224,.12),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(25,184,213,.08),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            120deg,
+            #fff,
+            #f7fbff 60%,
+            #edf7ff
+        );
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(23,105,224,.035) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(23,105,224,.035) 1px,
+            transparent 1px
+        );
+
+    background-size:55px 55px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            #000,
+            transparent 90%
+        );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:1.15fr .85fr;
+
+    gap:65px;
+
+    align-items:center;
+}
+
+.hero-kicker{
+    margin-bottom:15px;
+
+    color:var(--blue);
+
+    font-size:12px;
+    font-weight:800;
+
+    letter-spacing:2.4px;
+
+    text-transform:uppercase;
+}
+
+.hero h1{
+    margin-bottom:15px;
+
+    color:var(--navy);
+
+    font-size:clamp(52px,6vw,76px);
+
+    line-height:1;
+
+    letter-spacing:-3px;
+}
+
+.hero-speciality{
+    margin-bottom:25px;
+
+    color:var(--blue);
+
+    font-size:15px;
+    font-weight:700;
+}
+
+.hero-description{
+    max-width:690px;
+
+    color:#56677d;
+
+    font-size:14px;
+}
+
+.hero-actions{
+    display:flex;
     flex-wrap:wrap;
+
+    gap:13px;
+
     margin-top:30px;
 }
 
 .btn{
     display:inline-flex;
+
     align-items:center;
-    justify-content:center;
     gap:8px;
-    padding:13px 21px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:650;
-    transition:.25s;
-    cursor:pointer;
+
+    padding:13px 19px;
+
+    border-radius:11px;
+
+    font-size:12px;
+    font-weight:800;
+
+    transition:.3s;
 }
 
 .btn-primary{
-    background:var(--white);
-    color:var(--navy);
+    color:#fff;
+
+    background:var(--navy);
+
+    box-shadow:
+        0 12px 30px rgba(7,26,53,.15);
 }
 
 .btn-primary:hover{
-    transform:translateY(-2px);
-    box-shadow:0 8px 22px rgba(0,0,0,.18);
+    transform:translateY(-3px);
+
+    background:var(--blue);
 }
 
 .btn-outline{
-    border:1px solid #b7cbd2;
-    color:var(--white);
+    color:var(--navy);
+
+    background:#fff;
+
+    border:1px solid #b9cadd;
 }
 
 .btn-outline:hover{
-    background:rgba(255,255,255,.10);
+    transform:translateY(-3px);
+
+    color:var(--blue);
+
+    border-color:var(--blue);
 }
 
-.hero-photo{
+
+/* =========================================================
+   HERO PHOTO
+========================================================= */
+
+.hero-photo-area{
     position:relative;
-    text-align:center;
-}
 
-.hero-photo::before{
-    content:"";
-    position:absolute;
-    width:350px;
-    height:350px;
-    border-radius:50%;
-    background:#5C7C89;
-    opacity:.22;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-}
+    min-height:570px;
 
-.hero-photo img{
-    position:relative;
-    width:330px;
-    height:330px;
-    object-fit:cover;
-    border-radius:50%;
-    border:6px solid rgba(255,255,255,.96);
-    box-shadow:
-        0 20px 60px rgba(0,0,0,.35),
-        0 0 0 10px rgba(255,255,255,.06);
-}
+    display:flex;
 
-/* =========================
-   GENERAL
-========================= */
-
-section{
-    padding:85px 25px;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
-}
-
-.section-heading{
-    text-align:center;
-    margin-bottom:50px;
-}
-
-.section-heading span{
-    color:var(--slate);
-    font-size:13px;
-    font-weight:750;
-    letter-spacing:2px;
-    text-transform:uppercase;
-}
-
-.section-heading h2{
-    color:var(--navy);
-    font-size:36px;
-    margin-top:6px;
-    font-weight:750;
-    letter-spacing:-.5px;
-}
-
-.section-heading p{
-    color:var(--muted);
-    margin-top:8px;
-}
-
-/* =========================
-   ABOUT
-========================= */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:45px;
     align-items:center;
+    justify-content:center;
+}
+
+.photo-decoration{
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(23,105,224,.16);
+}
+
+.photo-decoration::before{
+    content:"";
+
+    position:absolute;
+
+    inset:35px;
+
+    border-radius:50%;
+
+    border:1px dashed rgba(23,105,224,.15);
+}
+
+.photo-decoration::after{
+    content:"";
+
+    position:absolute;
+
+    inset:-35px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(23,105,224,.07);
+}
+
+.profile-photo{
+    position:relative;
+
+    z-index:3;
+
+    width:390px;
+    height:390px;
+
+    overflow:hidden;
+
+    border-radius:50%;
+
+    background:#edf3f8;
+
+    border:7px solid #fff;
+
+    box-shadow:
+        0 30px 80px rgba(7,32,67,.18);
+}
+
+.profile-photo img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+}
+
+
+/* =========================================================
+   PROFESSIONAL DOMAINS
+========================================================= */
+
+.domains{
+    background:#fff;
+}
+
+.domain-heading{
+    margin-bottom:13px;
+
+    text-align:center;
+
+    color:var(--navy);
+
+    font-size:30px;
+}
+
+.domain-description{
+    max-width:900px;
+
+    margin:0 auto 45px;
+
+    text-align:center;
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+.domain-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+}
+
+.domain-card{
+    padding:28px;
+
+    text-align:center;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:21px;
+}
+
+.domain-icon{
+    width:60px;
+    height:60px;
+
+    display:grid;
+    place-items:center;
+
+    margin:0 auto 17px;
+
+    border-radius:17px;
+
+    color:var(--blue);
+
+    background:#edf6ff;
+}
+
+.domain-card h3{
+    color:var(--navy);
+
+    font-size:15px;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+    background:
+        linear-gradient(
+            180deg,
+            #f5faff,
+            #fff
+        );
+}
+
+.about-layout{
+    display:grid;
+
+    grid-template-columns:1.2fr .8fr;
+
+    gap:45px;
+
+    align-items:start;
 }
 
 .about-text{
-    font-size:16px;
-    color:#445b64;
+    padding:35px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    box-shadow:
+        0 12px 40px rgba(7,32,67,.04);
+}
+
+.about-text h3{
+    margin-bottom:22px;
+
+    color:var(--navy);
+
+    font-size:27px;
+
+    line-height:1.3;
 }
 
 .about-text p{
-    margin-bottom:18px;
+    margin-bottom:14px;
+
+    color:var(--muted);
+
+    font-size:13px;
 }
 
-/* PROFESSIONAL SNAPSHOT */
+.info-grid{
+    display:grid;
 
-.about-card{
-    background:
-        radial-gradient(circle at 90% 10%,rgba(92,124,137,.25),transparent 28%),
-        linear-gradient(145deg,#011425,#1F4959);
+    grid-template-columns:1fr 1fr;
 
-    border:1px solid rgba(255,255,255,.10);
-    border-radius:18px;
-    padding:30px;
+    gap:15px;
+}
 
-    box-shadow:
-        0 18px 45px rgba(1,20,37,.18);
-
-    color:var(--white);
+.info-card{
     position:relative;
+
+    min-height:125px;
+
+    padding:20px;
+
     overflow:hidden;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
 }
 
-.about-card h3{
-    color:var(--white);
-    margin-bottom:20px;
-    font-size:22px;
-    font-weight:700;
-    letter-spacing:.2px;
-}
+.info-card::after{
+    content:"";
 
-.info-row{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-    padding:14px 0;
-    border-bottom:1px solid rgba(255,255,255,.12);
-}
+    position:absolute;
 
-.info-row:last-child{
-    border-bottom:0;
-}
+    width:90px;
+    height:90px;
 
-.info-label{
-    display:flex;
-    align-items:center;
-    gap:11px;
+    right:-30px;
+    bottom:-35px;
+
+    border-radius:50%;
+
+    background:rgba(23,105,224,.05);
 }
 
 .info-icon{
-    width:34px;
-    height:34px;
+    width:40px;
+    height:40px;
+
+    display:grid;
+    place-items:center;
+
+    margin-bottom:12px;
+
+    border-radius:12px;
+
+    color:var(--blue);
+
+    background:#edf6ff;
+}
+
+.info-card small{
+    display:block;
+
+    color:#8391a2;
+
+    font-size:9px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+}
+
+.info-card strong{
+    display:block;
+
+    margin-top:3px;
+
+    color:var(--navy);
+
+    font-size:12px;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.experience{
+    background:#fff;
+}
+
+.experience-intro{
+    max-width:900px;
+
+    margin:
+        15px auto
+        50px;
+
+    text-align:center;
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+.experience-list{
+    display:grid;
+
+    gap:22px;
+}
+
+.exp-card{
+    display:grid;
+
+    grid-template-columns:300px 1fr;
+
+    gap:35px;
+
+    padding:30px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+}
+
+.exp-heading{
+    padding-right:25px;
+
+    border-right:1px solid var(--border);
+}
+
+.company-logo{
+    width:80px;
+    height:80px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    background:rgba(255,255,255,.10);
-    border:1px solid rgba(255,255,255,.14);
+    margin-bottom:17px;
 
-    border-radius:9px;
-    font-size:16px;
+    padding:10px;
 
-    box-shadow:0 4px 12px rgba(0,0,0,.10);
+    background:#fff;
+
+    border:1px solid #e1eaf3;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 8px 25px rgba(7,32,67,.06);
 }
 
-.info-row strong{
-    color:#ffffff;
-    font-size:14px;
-    font-weight:650;
-}
+.company-logo img{
+    width:100%;
+    height:100%;
 
-.info-row > span:last-child{
-    color:#d2e1e6;
-    font-size:14px;
-    font-weight:500;
-    text-align:right;
-}
-
-/* =========================
-   CAREER
-========================= */
-
-.career{
-    background:var(--white);
-}
-
-.timeline{
-    position:relative;
-    max-width:950px;
-    margin:auto;
-}
-
-.timeline::before{
-    content:"";
-    position:absolute;
-    left:50%;
-    top:0;
-    bottom:0;
-    width:2px;
-    background:#c6d4d9;
-    transform:translateX(-50%);
-}
-
-.timeline-item{
-    width:50%;
-    padding:15px 45px;
-    position:relative;
-}
-
-.timeline-item:nth-child(odd){
-    left:0;
-    text-align:right;
-}
-
-.timeline-item:nth-child(even){
-    left:50%;
-}
-
-.timeline-dot{
-    position:absolute;
-    width:15px;
-    height:15px;
-    border-radius:50%;
-    background:var(--teal);
-    border:4px solid #dce8ec;
-    top:35px;
-    z-index:2;
-}
-
-.timeline-item:nth-child(odd) .timeline-dot{
-    right:-7px;
-}
-
-.timeline-item:nth-child(even) .timeline-dot{
-    left:-7px;
-}
-
-.company-card{
-    background:#f8fbfc;
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:22px;
-    text-align:left;
-    transition:.25s;
-}
-
-.timeline-item:nth-child(odd) .company-card{
-    text-align:right;
-}
-
-.company-card:hover{
-    transform:translateY(-4px);
-    box-shadow:0 12px 30px rgba(1,20,37,.09);
-}
-
-.company-logo{
-    width:150px;
-    height:75px;
     object-fit:contain;
-    background:white;
-    border-radius:5px;
-    padding:5px;
-    margin-bottom:5px;
 }
 
-.company-card h3{
-    color:var(--navy);
-    font-size:21px;
-    font-weight:700;
-}
+.exp-icon{
+    width:48px;
+    height:48px;
 
-.date{
-    color:var(--slate);
-    font-size:13px;
-    font-weight:700;
-    margin:4px 0;
-}
-
-.product{
-    color:var(--muted);
-    font-size:14px;
-}
-
-/* =========================
-   EXPERIENCE
-========================= */
-
-.experience-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:22px;
+    place-items:center;
+
+    margin-bottom:16px;
+
+    border-radius:13px;
+
+    color:var(--blue);
+
+    background:#edf6ff;
 }
 
-.experience-card{
-    background:var(--white);
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:27px;
-    box-shadow:0 8px 25px rgba(1,20,37,.05);
-}
+.exp-heading h3{
+    margin-bottom:8px;
 
-.experience-card h3{
     color:var(--navy);
-    margin-bottom:5px;
-    font-weight:700;
+
+    font-size:20px;
+
+    line-height:1.35;
 }
 
-.experience-card .role{
-    color:var(--slate);
-    font-weight:700;
+.exp-heading h4{
+    color:var(--blue);
+
     font-size:14px;
-    margin-bottom:15px;
+
+    font-weight:800;
 }
 
-.experience-card ul{
-    padding-left:20px;
-    color:#52656d;
+.exp-period{
+    display:inline-block;
+
+    margin-top:9px;
+
+    padding:5px 9px;
+
+    color:#60758d;
+
+    background:#f2f7fc;
+
+    border-radius:7px;
+
+    font-size:10px;
+
+    font-weight:700;
 }
 
-.experience-card li{
-    margin-bottom:7px;
+.exp-content ul{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:10px 30px;
+
+    padding-left:18px;
 }
 
-/* =========================
+.exp-content li{
+    color:#617287;
+
+    font-size:12px;
+}
+
+
+/* =========================================================
+   KEY EXPERTISE
+========================================================= */
+
+.key-expertise{
+    background:#f6faff;
+}
+
+.badge-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:17px;
+}
+
+.expertise-badge{
+    min-height:145px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px;
+
+    text-align:center;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:19px;
+}
+
+.badge-icon{
+    width:48px;
+    height:48px;
+
+    display:grid;
+    place-items:center;
+
+    margin-bottom:12px;
+
+    border-radius:14px;
+
+    color:var(--blue);
+
+    background:#edf6ff;
+}
+
+.expertise-badge strong{
+    color:var(--navy);
+
+    font-size:11px;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+========================================================= */
+
+.achievements{
+    background:#fff;
+}
+
+.achievement-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+}
+
+.achievement-card{
+    position:relative;
+
+    min-height:235px;
+
+    padding:27px;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+}
+
+.achievement-card::before{
+    content:"";
+
+    position:absolute;
+
+    width:110px;
+    height:110px;
+
+    right:-45px;
+    top:-45px;
+
+    border-radius:50%;
+
+    background:rgba(23,105,224,.055);
+}
+
+.achievement-icon{
+    width:52px;
+    height:52px;
+
+    display:grid;
+    place-items:center;
+
+    margin-bottom:20px;
+
+    border-radius:15px;
+
+    color:var(--blue);
+
+    background:#edf6ff;
+}
+
+.achievement-card h3{
+    margin-bottom:9px;
+
+    color:var(--navy);
+
+    font-size:16px;
+}
+
+.achievement-card p{
+    color:var(--muted);
+
+    font-size:11px;
+}
+
+
+/* =========================================================
    SKILLS
-========================= */
-
-.skills-section{
-    background:#edf4f6;
-}
+========================================================= */
 
 .skills{
+    background:
+        linear-gradient(
+            180deg,
+            #f6faff,
+            #fff
+        );
+}
+
+.skill-category-grid{
     display:grid;
+
     grid-template-columns:repeat(4,1fr);
-    gap:15px;
+
+    gap:18px;
 }
 
-.skill{
-    background:var(--white);
+.skill-category{
+    padding:28px;
+
+    background:#fff;
+
     border:1px solid var(--border);
-    padding:22px 12px;
-    border-radius:12px;
-    text-align:center;
-    font-weight:700;
-    color:var(--navy);
-    transition:.2s;
+
+    border-radius:22px;
 }
 
-.skill-icon{
-    font-size:25px;
-    margin-bottom:7px;
-}
+.skill-category-icon{
+    width:50px;
+    height:50px;
 
-.skill:hover{
-    border-color:#8aa5af;
-    transform:translateY(-3px);
-}
-
-/* =========================
-   CERTIFICATIONS
-========================= */
-
-.cert-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    place-items:center;
+
+    margin-bottom:17px;
+
+    border-radius:15px;
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--blue),
+            var(--cyan)
+        );
 }
 
-.cert{
-    background:var(--white);
-    border:1px solid var(--border);
-    padding:25px;
-    border-radius:14px;
-}
+.skill-category h3{
+    margin-bottom:15px;
 
-.cert-icon{
-    font-size:30px;
-    margin-bottom:10px;
-}
-
-.cert h3{
     color:var(--navy);
-    font-size:18px;
-    font-weight:700;
-}
 
-.cert p{
-    color:var(--muted);
-    font-size:14px;
-    margin-top:7px;
-}
-
-/* =========================
-   CV
-========================= */
-
-.cv-section{
-    background:linear-gradient(135deg,#1F4959,#011425);
-    color:var(--white);
-    text-align:center;
-}
-
-.cv-section h2{
-    font-size:34px;
-    margin-bottom:10px;
-}
-
-.cv-section p{
-    color:#d5e3e7;
-    margin-bottom:25px;
-}
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact{
-    background:var(--navy);
-    color:var(--white);
-}
-
-.contact .section-heading h2{
-    color:var(--white);
-}
-
-.contact .section-heading p{
-    color:#b9c9cf;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.contact-card{
-    border:1px solid rgba(255,255,255,.12);
-    background:rgba(255,255,255,.05);
-    border-radius:13px;
-    padding:25px 18px;
-    text-align:center;
-    transition:.25s;
-}
-
-.contact-card:hover{
-    transform:translateY(-4px);
-    background:rgba(255,255,255,.08);
-}
-
-.contact-icon{
-    font-size:28px;
-    margin-bottom:8px;
-}
-
-.contact-card h3{
-    margin-bottom:7px;
     font-size:17px;
 }
 
-.contact-card a{
-    color:#c8e1e8;
-    text-decoration:none;
-    word-break:break-word;
-    font-size:14px;
+.skill-tags{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
 }
 
-.contact-card a:hover{
-    color:#ffffff;
+.skill-tags span{
+    padding:7px 10px;
+
+    color:#3d6084;
+
+    background:#f0f7ff;
+
+    border-radius:8px;
+
+    font-size:10px;
+
+    font-weight:700;
 }
 
-/* =========================
+
+/* =========================================================
+   CERTIFICATIONS
+========================================================= */
+
+.certifications{
+    background:#fff;
+}
+
+.cert-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.cert-card{
+    min-height:245px;
+
+    padding:27px;
+
+    text-align:center;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+}
+
+.cert-badge{
+    position:relative;
+
+    width:82px;
+    height:82px;
+
+    display:grid;
+    place-items:center;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0c956d,
+            #35c995
+        );
+
+    box-shadow:
+        0 13px 25px rgba(12,149,109,.20);
+}
+
+.cert-badge::after{
+    content:"";
+
+    position:absolute;
+
+    inset:7px;
+
+    border-radius:50%;
+
+    border:1px dashed rgba(255,255,255,.75);
+}
+
+.cert-card:nth-child(2) .cert-badge{
+    background:
+        linear-gradient(
+            145deg,
+            #155fca,
+            #4ca0ff
+        );
+}
+
+.cert-card:nth-child(3) .cert-badge{
+    background:
+        linear-gradient(
+            145deg,
+            #07889c,
+            #38cddd
+        );
+}
+
+.cert-card:nth-child(4) .cert-badge{
+    background:
+        linear-gradient(
+            145deg,
+            #e57a16,
+            #ffb346
+        );
+}
+
+.cert-card:nth-child(5) .cert-badge{
+    background:
+        linear-gradient(
+            145deg,
+            #0b7b5c,
+            #39bf96
+        );
+}
+
+.cert-card:nth-child(6) .cert-badge{
+    background:
+        linear-gradient(
+            145deg,
+            #b7830d,
+            #eebc37
+        );
+}
+
+.cert-card h3{
+    margin-bottom:8px;
+
+    color:var(--navy);
+
+    font-size:16px;
+}
+
+.cert-card p{
+    color:var(--muted);
+
+    font-size:11px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+    color:#fff;
+
+    background:
+
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(30,129,230,.22),
+            transparent 30%
+        ),
+
+        var(--navy);
+}
+
+.contact .section-label{
+    color:#66c8ff;
+
+    font-size:18px;
+}
+
+.contact .section-title{
+    color:#fff;
+
+    font-size:47px;
+}
+
+.contact .section-subtitle{
+    color:#a7b8cb;
+}
+
+.contact-layout{
+    display:grid;
+
+    grid-template-columns:.75fr 1.25fr;
+
+    gap:50px;
+}
+
+.contact-info h3{
+    margin-bottom:12px;
+
+    font-size:27px;
+}
+
+.contact-info p{
+    margin-bottom:28px;
+
+    color:#9fb2c8;
+
+    font-size:12px;
+}
+
+.contact-item{
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:15px;
+}
+
+.contact-icon{
+    width:40px;
+    height:40px;
+
+    display:grid;
+    place-items:center;
+
+    flex-shrink:0;
+
+    border-radius:11px;
+
+    color:#63c7ff;
+
+    background:rgba(255,255,255,.07);
+}
+
+.contact-item span{
+    color:#d7e2ed;
+
+    font-size:12px;
+}
+
+.contact-item a:hover span{
+    color:#63c7ff;
+}
+
+.contact-form{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:14px;
+}
+
+.field{
+    position:relative;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+.field svg{
+    position:absolute;
+
+    left:14px;
+    top:15px;
+
+    width:17px;
+
+    color:#63c7ff;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+
+    padding:
+        14px
+        14px
+        14px
+        42px;
+
+    color:#fff;
+
+    background:rgba(255,255,255,.055);
+
+    border:1px solid rgba(255,255,255,.14);
+
+    border-radius:11px;
+
+    outline:none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color:#8398ae;
+}
+
+.contact-form textarea{
+    min-height:130px;
+
+    resize:vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#57b9f8;
+}
+
+.submit-btn{
+    padding:13px 22px;
+
+    color:#fff;
+
+    background:var(--blue);
+
+    border:0;
+
+    border-radius:10px;
+
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.submit-btn:hover{
+    background:var(--blue2);
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer{
-    background:#000d18;
-    color:#8fa4ae;
-    text-align:center;
-    padding:22px;
-    font-size:13px;
+    padding:23px 0;
+
+    color:#8396ac;
+
+    background:#041326;
 }
 
-/* =========================
-   MOBILE
-========================= */
+.footer-content{
+    display:flex;
 
-@media(max-width:850px){
+    align-items:center;
 
-    .nav-container{
-        flex-direction:column;
-        gap:10px;
-    }
+    justify-content:space-between;
+
+    font-size:11px;
+}
+
+.social-links{
+    display:flex;
+
+    gap:10px;
+}
+
+.social-links a{
+    width:37px;
+    height:37px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:10px;
+
+    color:#fff;
+
+    background:rgba(255,255,255,.07);
+
+    transition:.3s;
+}
+
+.social-links a:hover{
+    background:var(--blue);
+
+    transform:translateY(-4px);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1050px){
 
     .nav-links{
         gap:12px;
-        flex-wrap:wrap;
-        justify-content:center;
     }
 
-    .hero-container{
+    .hero-content{
         grid-template-columns:1fr;
+
         text-align:center;
     }
 
-    .hero p{
+    .hero-description{
         margin:auto;
     }
 
-    .hero-buttons{
+    .hero-actions{
         justify-content:center;
     }
 
-    .hero-photo{
-        order:-1;
-    }
-
-    .hero-photo img{
-        width:250px;
-        height:250px;
-    }
-
-    .hero h1{
-        font-size:45px;
-    }
-
-    .about-grid{
-        grid-template-columns:1fr;
-    }
-
-    .experience-grid{
-        grid-template-columns:1fr;
-    }
-
-    .skills{
+    .domain-grid,
+    .achievement-grid,
+    .skill-category-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
+    .badge-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-layout{
+        grid-template-columns:1fr;
+    }
+
+    .exp-card{
+        grid-template-columns:1fr;
+    }
+
+    .exp-heading{
+        padding-right:0;
+        padding-bottom:20px;
+
+        border-right:0;
+        border-bottom:1px solid var(--border);
+    }
+
+    .cert-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+
+@media(max-width:760px){
+
+    .nav-links{
+        position:absolute;
+
+        top:76px;
+        left:0;
+
+        width:100%;
+
+        display:none;
+
+        flex-direction:column;
+
+        padding:22px;
+
+        background:#fff;
+
+        border-bottom:1px solid var(--border);
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero{
+        min-height:auto;
+
+        padding-top:120px;
+        padding-bottom:80px;
+    }
+
+    .hero h1{
+        font-size:50px;
+    }
+
+    .hero-photo-area{
+        min-height:420px;
+    }
+
+    .profile-photo{
+        width:300px;
+        height:300px;
+    }
+
+    .photo-decoration{
+        width:350px;
+        height:350px;
+    }
+
+    .domain-grid,
+    .achievement-grid,
+    .skill-category-grid,
     .cert-grid{
         grid-template-columns:1fr;
     }
 
-    .contact-grid{
-        grid-template-columns:1fr;
-    }
-
-    .timeline::before{
-        left:10px;
-    }
-
-    .timeline-item,
-    .timeline-item:nth-child(even),
-    .timeline-item:nth-child(odd){
-        width:100%;
-        left:0;
-        text-align:left;
-        padding-left:40px;
-        padding-right:0;
-    }
-
-    .timeline-item:nth-child(odd) .company-card{
-        text-align:left;
-    }
-
-    .timeline-item:nth-child(odd) .timeline-dot,
-    .timeline-item:nth-child(even) .timeline-dot{
-        left:3px;
-        right:auto;
-    }
-
-    .info-row{
-        gap:12px;
-    }
-
-    .info-row > span:last-child{
-        max-width:55%;
-    }
-}
-
-@media(max-width:500px){
-
-    section{
-        padding:65px 18px;
-    }
-
-    .hero-container{
-        padding:60px 18px;
-    }
-
-    .hero h1{
-        font-size:38px;
-    }
-
-    .hero h2{
-        font-size:22px;
-    }
-
-    .hero-photo img{
-        width:220px;
-        height:220px;
-    }
-
-    .hero-photo::before{
-        width:240px;
-        height:240px;
-    }
-
-    .section-heading h2{
-        font-size:29px;
-    }
-
-    .skills{
+    .badge-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .about-card{
-        padding:22px;
+    .info-grid{
+        grid-template-columns:1fr;
     }
 
-    .info-row{
-        flex-direction:row;
+    .exp-content ul{
+        grid-template-columns:1fr;
+    }
+
+    .contact-layout{
+        grid-template-columns:1fr;
+    }
+
+    .contact-form{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    .footer-content{
+        flex-direction:column;
+
+        gap:15px;
+
+        text-align:center;
+    }
+}
+
+
+@media(max-width:420px){
+
+    .badge-grid{
+        grid-template-columns:1fr;
+    }
+
+    .profile-photo{
+        width:270px;
+        height:270px;
+    }
+
+    .photo-decoration{
+        width:315px;
+        height:315px;
     }
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- =========================
+
+<!-- =========================================================
      NAVIGATION
-========================= -->
+========================================================= -->
 
 <header class="navbar">
 
-<div class="nav-container">
+<div class="container nav-inner">
 
-<a href="#home" class="brand">
-<img src="ak-logo.png" alt="AK Logo">
-<span>Ankur Kumar</span>
+
+<a href="#home" class="logo">
+
+<div class="logo-mark">
+
+<img
+src="ak-logo.png"
+alt="AK Logo">
+
+</div>
+
+
+<div>
+
+Ankur Kumar
+
+<small>
+AUTOMOTIVE & EV QUALITY
+</small>
+
+</div>
+
 </a>
 
-<nav class="nav-links">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#career">Career</a>
-<a href="#experience">Experience</a>
-<a href="#skills">Skills</a>
-<a href="#certifications">Certifications</a>
-<a href="#contact">Contact</a>
+
+<nav class="nav-links" id="navLinks">
+
+<a href="#home">
+Home
+</a>
+
+<a href="#domains">
+Domains
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#experience">
+Experience
+</a>
+
+<a href="#expertise">
+Key Expertise
+</a>
+
+<a href="#achievements">
+Achievements
+</a>
+
+<a href="#skills">
+Skills
+</a>
+
+<a href="#certifications">
+Certifications
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+<a
+href="Ankur-Kumar-CV.pdf"
+download
+class="download-nav">
+
+Download CV
+
+</a>
+
 </nav>
+
+
+<button
+class="menu-btn"
+id="menuBtn">
+
+<i data-lucide="menu"></i>
+
+</button>
 
 </div>
 
 </header>
 
 
-<!-- =========================
+<!-- =========================================================
      HOME
-========================= -->
+========================================================= -->
 
-<section class="hero" id="home">
+<section
+class="hero"
+id="home">
 
-<div class="hero-container">
+<div class="container hero-content">
 
-<div>
 
-<div class="hero-small">
+<div class="reveal">
+
+
+<div class="hero-kicker">
+
 Automotive • EV • Quality Professional
+
 </div>
 
-<h1>Ankur Kumar</h1>
 
-<h2>Automotive & EV Quality Professional</h2>
+<h1>
+Ankur Kumar
+</h1>
 
-<p>
-I am an Automotive Quality Professional with more than 8 years
-of experience in automotive manufacturing, Supplier Quality,
-Customer Quality, New Product Development and practical
-problem-solving.
+
+<div class="hero-speciality">
+
+Supplier Quality • Customer Quality • NPD • Process Excellence
+
+</div>
+
+
+<p class="hero-description">
+
+With over 8 years of experience in the automotive and electric
+vehicle industry, I focus on improving product quality,
+strengthening manufacturing processes, and meeting customer
+requirements. My experience includes Supplier Quality,
+Customer Quality, New Product Development (NPD), Process
+Validation, APQP, PPAP, and continuous improvement. I work
+closely with cross-functional teams to solve quality issues
+and support reliable, cost-effective manufacturing solutions.
+
 </p>
 
-<div class="hero-buttons">
 
-<a href="#experience" class="btn btn-primary">
+<div class="hero-actions">
+
+
+<a
+href="#experience"
+class="btn btn-primary">
+
+<i data-lucide="briefcase-business"></i>
+
 View My Experience
+
 </a>
 
-<a href="./Ankur-Kumar-CV.pdf"
-class="btn btn-primary"
-target="_blank">
-📄 Download CV
+
+<a
+href="Ankur-Kumar-CV.pdf"
+download
+class="btn btn-outline">
+
+<i data-lucide="download"></i>
+
+Download CV
+
 </a>
+
 
 </div>
 
 </div>
 
-<div class="hero-photo">
 
-<img src="profile.png"
+<!-- PROFILE -->
+
+<div class="hero-photo-area reveal">
+
+<div class="photo-decoration"></div>
+
+
+<div class="profile-photo">
+
+<img
+src="profile.png"
 alt="Ankur Kumar">
 
 </div>
 
 </div>
 
+
+</div>
+
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
+     PROFESSIONAL DOMAINS
+========================================================= -->
+
+<section
+class="domains"
+id="domains">
+
+<div class="container">
+
+
+<div class="section-label">
+Professional Domains
+</div>
+
+
+<h2 class="domain-heading">
+Automotive, EV & Manufacturing Quality
+</h2>
+
+
+<p class="domain-description">
+
+Experienced in Customer Quality, Supplier Quality, APQP, PPAP,
+New Product Development, Supplier Development, Process Validation,
+and Continuous Improvement across the Automotive and EV industries,
+including Lighting, Braking, and Precision Manufacturing.
+
+</p>
+
+
+<div class="domain-grid">
+
+
+<div
+class="domain-card float-card reveal">
+
+<div class="domain-icon">
+<i data-lucide="cog"></i>
+</div>
+
+<h3>
+Steering System
+</h3>
+
+</div>
+
+
+<div
+class="domain-card float-card reveal">
+
+<div class="domain-icon">
+<i data-lucide="cpu"></i>
+</div>
+
+<h3>
+EV Component Quality
+</h3>
+
+</div>
+
+
+<div
+class="domain-card float-card reveal">
+
+<div class="domain-icon">
+<i data-lucide="lightbulb"></i>
+</div>
+
+<h3>
+Automotive Lighting
+</h3>
+
+</div>
+
+
+<div
+class="domain-card float-card reveal">
+
+<div class="domain-icon">
+<i data-lucide="armchair"></i>
+</div>
+
+<h3>
+Seating Solution
+</h3>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
      ABOUT
-========================= -->
+========================================================= -->
 
-<section id="about">
+<section
+class="about"
+id="about">
 
 <div class="container">
 
-<div class="section-heading">
 
-<span>About Me</span>
-
-<h2>My Professional Profile</h2>
-
-<p>
-A practical approach to automotive quality and problem-solving.
-</p>
-
+<div class="section-label">
+About Me
 </div>
 
-<div class="about-grid">
 
-<div class="about-text">
+<h2 class="section-title">
+Professional Profile
+</h2>
 
-<p>
-I am an Automotive Quality professional with experience across
-automotive and EV manufacturing. My work has covered Supplier Quality,
-Customer Quality, New Product Development, process validation,
-audits and quality improvement.
+
+<p class="section-subtitle">
+
+Building Quality Through Process Validation,
+Testing and Problem Solving
+
 </p>
 
+
+<div class="about-layout">
+
+
+<div
+class="about-text reveal">
+
+
+<h3>
+
+Building Quality Through Process Validation,
+Testing and Problem Solving
+
+</h3>
+
+
 <p>
-I have worked with products including steering systems, automotive
-seating solutions, disk brake assemblies, EV motor control units
+
+I am an Automotive and EV Quality Professional with 8+ years of
+experience in Supplier Quality, Customer Quality, New Product
+Development, Process Validation, Quality Audits and Continuous Improvement.
+
+</p>
+
+
+<p>
+
+I have worked with different automotive products including steering
+systems, seating components, brake assemblies, EV motor control units
 and automotive lighting systems.
+
 </p>
+
 
 <p>
-My approach to quality is simple: understand the process, identify
-the actual root cause and make sure the corrective action prevents
-the problem from happening again.
+
+My experience includes supplier development, customer complaint handling,
+PPAP, APQP, process validation, root cause analysis, dimensional inspection,
+layout inspection and quality assurance activities.
+
 </p>
 
-</div>
+
+<p>
+
+I also have hands on experience with VMM, Contour Tracer, Roughness Tester,
+UTM, Basic CMM, Vernier Caliper, Micrometre, Height Gauge and other
+standard room measurement equipment.
+
+</p>
 
 
-<!-- PROFESSIONAL SNAPSHOT -->
+<p>
 
-<div class="about-card">
+I follow a simple approach to quality. Understand the process, check the
+results through data and testing, find the actual root cause and take
+effective corrective actions to prevent the problem from happening again.
 
-<h3>Professional Snapshot</h3>
-
-<div class="info-row">
-
-<span class="info-label">
-<span class="info-icon">🚗</span>
-<strong>Industry</strong>
-</span>
-
-<span>Automotive & EV</span>
-
-</div>
+</p>
 
 
-<div class="info-row">
+<p>
 
-<span class="info-label">
-<span class="info-icon">⏱️</span>
-<strong>Experience</strong>
-</span>
+My focus is on improving product quality, supporting suppliers and
+production teams, and delivering reliable products that meet customer
+requirements.
 
-<span>8+ Years</span>
+</p>
 
-</div>
-
-
-<div class="info-row">
-
-<span class="info-label">
-<span class="info-icon">⚙️</span>
-<strong>Core Area</strong>
-</span>
-
-<span>Quality Engineering</span>
 
 </div>
 
 
-<div class="info-row">
+<div class="info-grid">
 
-<span class="info-label">
-<span class="info-icon">🎯</span>
-<strong>Quality Focus</strong>
-</span>
 
-<span>Supplier & Customer Quality</span>
+<div class="info-card float-card reveal">
+
+<div class="info-icon">
+<i data-lucide="car"></i>
+</div>
+
+<small>
+Industry
+</small>
+
+<strong>
+Automotive and EV
+</strong>
 
 </div>
 
 
-<div class="info-row">
+<div class="info-card float-card reveal">
 
-<span class="info-label">
-<span class="info-icon">🔧</span>
-<strong>Products</strong>
-</span>
+<div class="info-icon">
+<i data-lucide="calendar-range"></i>
+</div>
 
-<span>Automotive Components</span>
+<small>
+Experience
+</small>
+
+<strong>
+8+ Years
+</strong>
 
 </div>
+
+
+<div class="info-card float-card reveal">
+
+<div class="info-icon">
+<i data-lucide="settings"></i>
+</div>
+
+<small>
+Core Area
+</small>
+
+<strong>
+Quality Engineering
+</strong>
+
+</div>
+
+
+<div class="info-card float-card reveal">
+
+<div class="info-icon">
+<i data-lucide="target"></i>
+</div>
+
+<small>
+Quality Focus
+</small>
+
+<strong>
+Supplier, New Model and Customer Quality
+</strong>
+
+</div>
+
+
+<div class="info-card float-card reveal">
+
+<div class="info-icon">
+<i data-lucide="boxes"></i>
+</div>
+
+<small>
+Products
+</small>
+
+<strong>
+Automotive Components and Systems
+</strong>
+
+</div>
+
+
+<div class="info-card float-card reveal">
+
+<div class="info-icon">
+<i data-lucide="microscope"></i>
+</div>
+
+<small>
+Key Skills
+</small>
+
+<strong>
+Problem Solving, Testing and Process Validation
+</strong>
+
+</div>
+
 
 </div>
 
@@ -1007,152 +2163,390 @@ the problem from happening again.
 </section>
 
 
-<!-- =========================
-     CAREER
-========================= -->
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
 
-<section class="career" id="career">
+<section
+class="experience"
+id="experience">
 
 <div class="container">
 
-<div class="section-heading">
 
-<span>Career Journey</span>
-
-<h2>My Professional Journey</h2>
-
-<p>
-Experience across automotive and EV products.
-</p>
-
+<div class="section-label">
+Professional Experience
 </div>
 
-<div class="timeline">
+
+<h2 class="section-title">
+What I Work On
+</h2>
 
 
-<div class="timeline-item">
+<p class="experience-intro">
 
-<div class="timeline-dot"></div>
+I have hands on experience across Customer Quality, Supplier Quality,
+New Product Development, Process Validation, Quality Audits, and
+Continuous Improvement in the Automotive and EV industry. My work
+involves solving quality issues, supporting new product development,
+improving supplier performance, and ensuring customer requirements
+are consistently met.
 
-<div class="company-card">
+</p>
 
-<img src="india-japan-lighting.png"
-class="company-logo"
+
+<div class="experience-list">
+
+
+<!-- INDIA JAPAN LIGHTING -->
+
+<div
+class="exp-card float-card reveal">
+
+<div class="exp-heading">
+
+
+<div class="company-logo">
+
+<img
+src="india-japan-lighting.png"
 alt="India Japan Lighting">
 
-<h3>India Japan Lighting Pvt Ltd.</h3>
-
-<div class="date">
-18-Oct-2024 – Present
-</div>
-
-<div class="product">
-Automotive Lighting Solutions
-</div>
-
-</div>
-
 </div>
 
 
-<div class="timeline-item">
+<h3>
+Customer Quality & Supplier Quality
+</h3>
 
-<div class="timeline-dot"></div>
 
-<div class="company-card">
+<h4>
+India Japan Lighting Pvt. Ltd.
+</h4>
 
-<img src="sterling-emobility.png"
-class="company-logo"
+
+</div>
+
+
+<div class="exp-content">
+
+<ul>
+
+<li>
+Handling customer complaints and supporting timely quality issue resolution.
+</li>
+
+<li>
+Analysing warranty returns and investigating field quality issues.
+</li>
+
+<li>
+Conducting root cause analysis using 8D, A3, 5 Why, and FTA methods.
+</li>
+
+<li>
+Supporting customer and supplier audits, QAV audits, and quality compliance activities.
+</li>
+
+<li>
+Supporting new product launches, trials, and ECN implementation.
+</li>
+
+<li>
+Providing customer line support and coordinating claim investigations.
+</li>
+
+<li>
+Working with Production, Supplier Quality, R&D, and other cross-functional teams.
+</li>
+
+<li>
+Monitoring quality performance and driving improvement activities.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- STERLING -->
+
+<div
+class="exp-card float-card reveal">
+
+<div class="exp-heading">
+
+
+<div class="company-logo">
+
+<img
+src="sterling-emobility.png"
 alt="Sterling E-Mobility">
 
-<h3>Sterling E-Mobility Ltd.</h3>
-
-<div class="date">
-22-May-2023 – 16-Oct-2024
-</div>
-
-<div class="product">
-EV Motor Control Units
-</div>
-
-</div>
-
 </div>
 
 
-<div class="timeline-item">
+<h3>
+Supplier Quality & New Model Development
+</h3>
 
-<div class="timeline-dot"></div>
 
-<div class="company-card">
+<h4>
+Sterling E-Mobility Ltd.
+</h4>
 
-<img src="hitachi-astemo.png"
-class="company-logo"
+
+</div>
+
+
+<div class="exp-content">
+
+<ul>
+
+<li>
+Managing supplier quality for EV components and assemblies.
+</li>
+
+<li>
+Reviewing PPAP documents and supporting APQP activities and supplier approvals.
+</li>
+
+<li>
+Supporting new part development, trials, and product validation.
+</li>
+
+<li>
+Conducting supplier audits and evaluating process capability.
+</li>
+
+<li>
+Working on supplier development and continuous improvement activities.
+</li>
+
+<li>
+Preparing and sharing supplier quality rating cards and performance reports.
+</li>
+
+<li>
+Managing 4M changes and verifying inspection and quality data.
+</li>
+
+<li>
+Monitoring Cp and Cpk and supporting process improvement.
+</li>
+
+<li>
+Resolving supplier quality issues through structured problem-solving.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- HITACHI -->
+
+<div
+class="exp-card float-card reveal">
+
+<div class="exp-heading">
+
+
+<div class="company-logo">
+
+<img
+src="hitachi-astemo.png"
 alt="Hitachi Astemo">
 
-<h3>Hitachi Astemo Rajasthan Brake Systems Pvt. Ltd.</h3>
-
-<div class="date">
-10-Oct-2019 – 12-May-2023
-</div>
-
-<div class="product">
-Disk Brake Assembly
-</div>
-
-</div>
-
 </div>
 
 
-<div class="timeline-item">
+<h3>
+SQA & New Model Quality Engineering
+</h3>
 
-<div class="timeline-dot"></div>
 
-<div class="company-card">
+<h4>
+Hitachi Astemo Rajasthan Brake Systems Pvt. Ltd.
+</h4>
 
-<img src="meenakshi-polymers.png"
-class="company-logo"
+
+</div>
+
+
+<div class="exp-content">
+
+<ul>
+
+<li>
+Supporting new child parts development and supplier localization.
+</li>
+
+<li>
+Conducting supplier inspections, audits, and process validation activities.
+</li>
+
+<li>
+Supporting APQP and PPAP activities for new projects.
+</li>
+
+<li>
+Reviewing customer requirements and conducting feasibility checks.
+</li>
+
+<li>
+Reviewing engineering drawings and interpreting GD&T requirements.
+</li>
+
+<li>
+Performing root cause analysis and following up on corrective actions.
+</li>
+
+<li>
+Supporting supplier capability improvement and defect prevention activities.
+</li>
+
+<li>
+Working closely with suppliers and internal teams to ensure quality requirements are achieved.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- MEENAKSHI -->
+
+<div
+class="exp-card float-card reveal">
+
+<div class="exp-heading">
+
+
+<div class="company-logo">
+
+<img
+src="meenakshi-polymers.png"
 alt="Meenakshi Polymers">
 
-<h3>Meenakshi Polymers Pvt Ltd.</h3>
-
-<div class="date">
-06-Dec-2017 – 09-Oct-2019
-</div>
-
-<div class="product">
-Automotive Seating Solutions
-</div>
-
-</div>
-
 </div>
 
 
-<div class="timeline-item">
+<h3>
+Automotive Manufacturing & Quality
+</h3>
 
-<div class="timeline-dot"></div>
 
-<div class="company-card">
+<h4>
+Meenakshi Polymers Pvt. Ltd.
+</h4>
 
-<img src="somic-zf.png"
-class="company-logo"
+
+</div>
+
+
+<div class="exp-content">
+
+<ul>
+
+<li>
+Hands-on experience in automotive component manufacturing and quality inspection.
+</li>
+
+<li>
+Worked on incoming and in-process inspection activities.
+</li>
+
+<li>
+Supported dimensional inspection and quality verification.
+</li>
+
+<li>
+Worked with manufacturing teams for defect identification and correction.
+</li>
+
+<li>
+Supported shop-floor quality control and process improvement activities.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- SOMIC -->
+
+<div
+class="exp-card float-card reveal">
+
+<div class="exp-heading">
+
+
+<div class="company-logo">
+
+<img
+src="somic-zf.png"
 alt="Somic ZF">
 
-<h3>Somic ZF Components Pvt Ltd.</h3>
-
-<div class="date">
-06-Dec-2017 – 30-Nov-2018
 </div>
 
-<div class="product">
-Steering System
+
+<h3>
+Quality Inspection & Standard Room
+</h3>
+
+
+<h4>
+Somic ZF Components Pvt. Ltd.
+</h4>
+
+
 </div>
+
+
+<div class="exp-content">
+
+<ul>
+
+<li>
+Worked on Incoming Inspection, In-Process Inspection and Standard Room activities.
+</li>
+
+<li>
+Performed layout inspection and dimensional verification of automotive components.
+</li>
+
+<li>
+Gained practical experience with VMM, Contour Tracer and Roughness Tester.
+</li>
+
+<li>
+Worked with UTM and basic CMM operations.
+</li>
+
+<li>
+Used Vernier Caliper, Micrometre, Height Gauge and other measuring instruments.
+</li>
+
+<li>
+Developed practical understanding of measurement systems and manufacturing quality.
+</li>
+
+</ul>
 
 </div>
 
 </div>
+
 
 </div>
 
@@ -1161,236 +2555,140 @@ Steering System
 </section>
 
 
-<!-- =========================
-     EXPERIENCE
-========================= -->
+<!-- =========================================================
+     KEY EXPERTISE
+========================================================= -->
 
-<section id="experience">
+<section
+class="key-expertise"
+id="expertise">
 
 <div class="container">
 
-<div class="section-heading">
 
-<span>Professional Experience</span>
-
-<h2>What I Work On</h2>
-
-<p>
-Practical quality activities from my professional experience.
-</p>
-
+<div class="section-label">
+Key Expertise
 </div>
 
-<div class="experience-grid">
+
+<h2 class="section-title">
+Professional Quality Expertise
+</h2>
 
 
-<div class="experience-card">
+<p class="section-subtitle">
 
-<h3>India Japan Lighting</h3>
+Core quality, engineering and automotive manufacturing capabilities.
 
-<div class="role">
+</p>
+
+
+<div class="badge-grid">
+
+
+<div class="expertise-badge float-card reveal">
+
+<div class="badge-icon">
+<i data-lucide="users"></i>
+</div>
+
+<strong>
 Customer Quality Assurance
-</div>
-
-<ul>
-
-<li>Customer complaint handling and quality analysis.</li>
-
-<li>Warranty return and field failure investigation.</li>
-
-<li>8D, 5 Why, FTA and root cause analysis.</li>
-
-<li>Customer audit and quality support.</li>
-
-<li>New Product Development support.</li>
-
-<li>Coordination with Production, Supplier Quality and R&D.</li>
-
-</ul>
+</strong>
 
 </div>
 
 
-<div class="experience-card">
+<div class="expertise-badge float-card reveal">
 
-<h3>Sterling E-Mobility</h3>
-
-<div class="role">
-Supplier Quality Assurance & New Model
+<div class="badge-icon">
+<i data-lucide="factory"></i>
 </div>
 
-<ul>
-
-<li>Supplier quality activities for EV components.</li>
-
-<li>PPAP review and supplier documentation.</li>
-
-<li>Supplier development and process improvement.</li>
-
-<li>Process and product quality monitoring.</li>
-
-<li>4M Change, SST, Layout and capability review.</li>
-
-</ul>
+<strong>
+Supplier Quality Assurance
+</strong>
 
 </div>
 
 
-<div class="experience-card">
+<div class="expertise-badge float-card reveal">
 
-<h3>Hitachi Astemo</h3>
-
-<div class="role">
-Supplier Quality & New Part Development
+<div class="badge-icon">
+<i data-lucide="package-check"></i>
 </div>
 
-<ul>
-
-<li>Supplier development and process validation.</li>
-
-<li>New part development and localization.</li>
-
-<li>Supplier inspection and audit activities.</li>
-
-<li>Customer requirement evaluation.</li>
-
-<li>Technical problem-solving and quality improvement.</li>
-
-</ul>
+<strong>
+New Product Development (NPD)
+</strong>
 
 </div>
 
 
-<div class="experience-card">
+<div class="expertise-badge float-card reveal">
 
-<h3>Automotive Manufacturing</h3>
-
-<div class="role">
-Early Career Experience
+<div class="badge-icon">
+<i data-lucide="clipboard-check"></i>
 </div>
 
-<ul>
-
-<li>Steering system components.</li>
-
-<li>Automotive seating solutions.</li>
-
-<li>Manufacturing and inspection activities.</li>
-
-<li>Practical exposure to automotive quality requirements.</li>
-
-</ul>
+<strong>
+APQP & PPAP
+</strong>
 
 </div>
 
+
+<div class="expertise-badge float-card reveal">
+
+<div class="badge-icon">
+<i data-lucide="triangle-alert"></i>
 </div>
 
-</div>
-
-</section>
-
-
-<!-- =========================
-     SKILLS
-========================= -->
-
-<section class="skills-section" id="skills">
-
-<div class="container">
-
-<div class="section-heading">
-
-<span>Skills & Expertise</span>
-
-<h2>Quality Tools & Engineering Skills</h2>
-
-<p>
-Tools I use for quality improvement and problem-solving.
-</p>
+<strong>
+FMEA (AIAG-VDA)
+</strong>
 
 </div>
 
-<div class="skills">
 
-<div class="skill">
-<div class="skill-icon">📋</div>
-APQP
+<div class="expertise-badge float-card reveal">
+
+<div class="badge-icon">
+<i data-lucide="target"></i>
 </div>
 
-<div class="skill">
-<div class="skill-icon">📑</div>
-PPAP
-</div>
-
-<div class="skill">
-<div class="skill-icon">⚙️</div>
-FMEA
-</div>
-
-<div class="skill">
-<div class="skill-icon">📊</div>
-SPC
-</div>
-
-<div class="skill">
-<div class="skill-icon">📐</div>
-MSA
-</div>
-
-<div class="skill">
-<div class="skill-icon">🔧</div>
+<strong>
 8D Problem Solving
+</strong>
+
 </div>
 
-<div class="skill">
-<div class="skill-icon">🔍</div>
-Root Cause Analysis
+
+<div class="expertise-badge float-card reveal">
+
+<div class="badge-icon">
+<i data-lucide="search-check"></i>
 </div>
 
-<div class="skill">
-<div class="skill-icon">👥</div>
-Customer Quality
-</div>
-
-<div class="skill">
-<div class="skill-icon">🏭</div>
-Supplier Quality
-</div>
-
-<div class="skill">
-<div class="skill-icon">✅</div>
-IATF 16949
-</div>
-
-<div class="skill">
-<div class="skill-icon">📈</div>
-Supplier Development
-</div>
-
-<div class="skill">
-<div class="skill-icon">🧪</div>
-Process Validation
-</div>
-
-<div class="skill">
-<div class="skill-icon">📏</div>
-GD&T
-</div>
-
-<div class="skill">
-<div class="skill-icon">🔬</div>
-Failure Analysis
-</div>
-
-<div class="skill">
-<div class="skill-icon">📝</div>
+<strong>
 Quality Audits
+</strong>
+
 </div>
 
-<div class="skill">
-<div class="skill-icon">💡</div>
-Problem Solving
+
+<div class="expertise-badge float-card reveal">
+
+<div class="badge-icon">
+<i data-lucide="shield-check"></i>
 </div>
+
+<strong>
+Quality Systems & Compliance
+</strong>
+
+</div>
+
 
 </div>
 
@@ -1399,105 +2697,454 @@ Problem Solving
 </section>
 
 
-<!-- =========================
-     CERTIFICATIONS
-========================= -->
+<!-- =========================================================
+     ACHIEVEMENTS
+========================================================= -->
 
-<section id="certifications">
+<section
+class="achievements"
+id="achievements">
 
 <div class="container">
 
-<div class="section-heading">
 
-<span>Certifications</span>
+<div class="section-label">
+Professional Achievements
+</div>
 
-<h2>Training & Certifications</h2>
+
+<h2 class="section-title">
+Key Contributions
+</h2>
+
+
+<p class="section-subtitle">
+
+Practical contributions across customer quality, supplier development,
+new products, testing and process improvement.
+
+</p>
+
+
+<div class="achievement-grid">
+
+
+<div class="achievement-card float-card reveal">
+
+<div class="achievement-icon">
+<i data-lucide="users"></i>
+</div>
+
+<h3>
+Customer Quality
+</h3>
 
 <p>
-Professional quality-related learning and training.
+Handled customer complaints, warranty issues and field concerns
+through root cause analysis and corrective actions.
 </p>
 
 </div>
+
+
+<div class="achievement-card float-card reveal">
+
+<div class="achievement-icon">
+<i data-lucide="factory"></i>
+</div>
+
+<h3>
+Supplier Quality
+</h3>
+
+<p>
+Improved supplier performance through audits, process monitoring,
+capability checks and supplier development.
+</p>
+
+</div>
+
+
+<div class="achievement-card float-card reveal">
+
+<div class="achievement-icon">
+<i data-lucide="package-check"></i>
+</div>
+
+<h3>
+New Product Development
+</h3>
+
+<p>
+Supported new product launches through APQP, PPAP, trials
+and process validation.
+</p>
+
+</div>
+
+
+<div class="achievement-card float-card reveal">
+
+<div class="achievement-icon">
+<i data-lucide="search-check"></i>
+</div>
+
+<h3>
+Problem Solving
+</h3>
+
+<p>
+Resolved quality issues using 8D, 5 Why, FTA and data based analysis.
+</p>
+
+</div>
+
+
+<div class="achievement-card float-card reveal">
+
+<div class="achievement-icon">
+<i data-lucide="microscope"></i>
+</div>
+
+<h3>
+Testing and Validation
+</h3>
+
+<p>
+Handled dimensional inspection, layout inspection, testing and
+process validation using VMM, UTM, CMM and other measuring equipment.
+</p>
+
+</div>
+
+
+<div class="achievement-card float-card reveal">
+
+<div class="achievement-icon">
+<i data-lucide="trending-up"></i>
+</div>
+
+<h3>
+Process Improvement
+</h3>
+
+<p>
+Worked on defect reduction, preventive actions and continuous
+improvement to improve product and process quality.
+</p>
+
+</div>
+
+
+<div class="achievement-card float-card reveal">
+
+<div class="achievement-icon">
+<i data-lucide="clipboard-check"></i>
+</div>
+
+<h3>
+Quality Audits
+</h3>
+
+<p>
+Participated in supplier, process and product audits to identify
+gaps and improve quality performance.
+</p>
+
+</div>
+
+
+<div class="achievement-card float-card reveal">
+
+<div class="achievement-icon">
+<i data-lucide="shield-check"></i>
+</div>
+
+<h3>
+Quality Systems and Compliance
+</h3>
+
+<p>
+Worked with customer requirements, quality standards and internal
+quality processes to maintain consistent product quality.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section
+class="skills"
+id="skills">
+
+<div class="container">
+
+
+<div class="section-label">
+Skills & Expertise
+</div>
+
+
+<h2 class="section-title">
+Quality Tools & Engineering Skills
+</h2>
+
+
+<p class="section-subtitle">
+
+Practical experience in quality tools, problem solving,
+supplier development and automotive manufacturing processes.
+
+</p>
+
+
+<div class="skill-category-grid">
+
+
+<div class="skill-category float-card reveal">
+
+<div class="skill-category-icon">
+<i data-lucide="clipboard-check"></i>
+</div>
+
+<h3>
+Quality Tools
+</h3>
+
+<div class="skill-tags">
+
+<span>APQP</span>
+<span>PPAP</span>
+<span>FMEA</span>
+<span>SPC</span>
+<span>MSA</span>
+<span>8D</span>
+<span>5 Why</span>
+<span>FTA</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-category float-card reveal">
+
+<div class="skill-category-icon">
+<i data-lucide="shield-check"></i>
+</div>
+
+<h3>
+Quality Areas
+</h3>
+
+<div class="skill-tags">
+
+<span>Customer Quality</span>
+<span>Supplier Quality</span>
+<span>Supplier Development</span>
+<span>Quality Audits</span>
+<span>Failure Analysis</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-category float-card reveal">
+
+<div class="skill-category-icon">
+<i data-lucide="settings"></i>
+</div>
+
+<h3>
+Engineering Skills
+</h3>
+
+<div class="skill-tags">
+
+<span>Process Validation</span>
+<span>GD&T</span>
+<span>Root Cause Analysis</span>
+<span>Problem Solving</span>
+<span>Continuous Improvement</span>
+
+</div>
+
+</div>
+
+
+<div class="skill-category float-card reveal">
+
+<div class="skill-category-icon">
+<i data-lucide="badge-check"></i>
+</div>
+
+<h3>
+Quality Standards & Compliance
+</h3>
+
+<div class="skill-tags">
+
+<span>IATF 16949</span>
+<span>ISO 14001</span>
+<span>ISO 45001</span>
+<span>Occupational Health & Safety</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CERTIFICATIONS
+========================================================= -->
+
+<section
+class="certifications"
+id="certifications">
+
+<div class="container">
+
+
+<div class="section-label">
+Certifications
+</div>
+
+
+<h2 class="section-title">
+Training & Certifications
+</h2>
+
+
+<p class="section-subtitle">
+
+Quality, automotive manufacturing and problem solving related
+training and certifications.
+
+</p>
+
 
 <div class="cert-grid">
 
 
-<div class="cert">
+<div class="cert-card float-card reveal">
 
-<div class="cert-icon">🏆</div>
+<div class="cert-badge">
+<i data-lucide="award"></i>
+</div>
 
-<h3>Six Sigma Green Belt</h3>
+<h3>
+Six Sigma Green Belt
+</h3>
 
 <p>
-Quality improvement and structured problem-solving training.
+Quality improvement and structured problem solving.
 </p>
 
 </div>
 
 
-<div class="cert">
+<div class="cert-card float-card reveal">
 
-<div class="cert-icon">📋</div>
+<div class="cert-badge">
+<i data-lucide="clipboard-check"></i>
+</div>
 
-<h3>Core Quality Tools</h3>
+<h3>
+Core Quality Tools
+</h3>
 
 <p>
-APQP, PPAP, FMEA, SPC and MSA related training.
+APQP, PPAP, FMEA, SPC and MSA.
 </p>
 
 </div>
 
 
-<div class="cert">
+<div class="cert-card float-card reveal">
 
-<div class="cert-icon">⚙️</div>
+<div class="cert-badge">
+<i data-lucide="badge-check"></i>
+</div>
 
-<h3>IATF 16949</h3>
+<h3>
+IATF 16949
+</h3>
 
 <p>
-Automotive Quality Management System related knowledge and training.
+Automotive quality management system.
 </p>
 
 </div>
 
 
-<div class="cert">
+<div class="cert-card float-card reveal">
 
-<div class="cert-icon">🔍</div>
+<div class="cert-badge">
+<i data-lucide="search"></i>
+</div>
 
-<h3>Root Cause Analysis</h3>
+<h3>
+Root Cause Analysis
+</h3>
 
 <p>
-8D, 5 Why, FTA and practical problem-solving methods.
+8D, 5 Why and FTA based problem solving.
 </p>
 
 </div>
 
 
-<div class="cert">
+<div class="cert-card float-card reveal">
 
-<div class="cert-icon">🏭</div>
+<div class="cert-badge">
+<i data-lucide="leaf"></i>
+</div>
 
-<h3>Supplier Quality</h3>
+<h3>
+ISO 14001
+</h3>
 
 <p>
-Supplier development, audits and process improvement activities.
+Environmental Management System.
 </p>
 
 </div>
 
 
-<div class="cert">
+<div class="cert-card float-card reveal">
 
-<div class="cert-icon">📚</div>
+<div class="cert-badge">
+<i data-lucide="hard-hat"></i>
+</div>
 
-<h3>Other Professional Training</h3>
+<h3>
+ISO 45001
+</h3>
 
 <p>
-Additional automotive quality and manufacturing related training.
+Occupational Health & Safety.
 </p>
 
 </div>
+
 
 </div>
 
@@ -1506,118 +3153,245 @@ Additional automotive quality and manufacturing related training.
 </section>
 
 
-<!-- =========================
-     CV
-========================= -->
-
-<section class="cv-section">
-
-<div class="container">
-
-<h2>Interested in My Professional Profile?</h2>
-
-<p>
-You can view or download my latest CV for detailed information
-about my experience and qualifications.
-</p>
-
-<a href="Ankur-Kumar-CV.pdf"
-class="btn btn-primary"
-target="_blank">
-📄 View / Download CV
-</a>
-
-</div>
-
-</section>
-
-
-<!-- =========================
+<!-- =========================================================
      CONTACT
-========================= -->
+========================================================= -->
 
-<section class="contact" id="contact">
+<section
+class="contact"
+id="contact">
 
 <div class="container">
 
-<div class="section-heading">
 
-<span>Contact</span>
-
-<h2>Let's Connect</h2>
-
-<p>
-I am open to connecting with recruiters, hiring managers
-and professionals from the automotive and EV industry.
-</p>
-
+<div class="section-label">
+Contact
 </div>
 
 
-<div class="contact-grid">
+<h2 class="section-title">
+Let's Connect
+</h2>
 
 
-<!-- EMAIL -->
+<p class="section-subtitle">
 
-<div class="contact-card">
+Open to connecting with recruiters, hiring managers and professionals
+from the Automotive and EV industry.
 
-<div class="contact-icon">✉️</div>
+</p>
 
-<h3>Email</h3>
+
+<div class="contact-layout">
+
+
+<div class="contact-info reveal">
+
+
+<h3>
+Professional Contact
+</h3>
+
+
+<p>
+
+For professional opportunities, automotive quality discussions
+or industry connections, feel free to contact me.
+
+</p>
+
+
+<div class="contact-item">
+
+<div class="contact-icon">
+<i data-lucide="mail"></i>
+</div>
 
 <a href="mailto:ankurkumar0941@gmail.com">
+
+<span>
 ankurkumar0941@gmail.com
+</span>
+
 </a>
 
 </div>
 
 
-<!-- LINKEDIN -->
+<div class="contact-item">
 
-<div class="contact-card">
-
-<div class="contact-icon">🔗</div>
-
-<h3>LinkedIn</h3>
-
-<a href="https://www.linkedin.com/in/ankur-kumar-831b54103/"
-target="_blank">
-View LinkedIn Profile
-</a>
-
+<div class="contact-icon">
+<i data-lucide="phone"></i>
 </div>
-
-
-<!-- PHONE -->
-
-<div class="contact-card">
-
-<div class="contact-icon">📞</div>
-
-<h3>Phone</h3>
 
 <a href="tel:+919461797767">
-+91-9461797767
+
+<span>
++91 94617 97767
+</span>
+
 </a>
 
 </div>
 
 
-<!-- CV -->
+<div class="contact-item">
 
-<div class="contact-card">
+<div class="contact-icon">
+<i data-lucide="linkedin"></i>
+</div>
 
-<div class="contact-icon">📄</div>
+<a
+href="https://www.linkedin.com/in/ankur-kumar-831b54103/"
+target="_blank"
+rel="noopener">
 
-<h3>My CV</h3>
+<span>
+LinkedIn Profile
+</span>
 
-<a href="Ankur-Kumar-CV.pdf"
-target="_blank">
-View CV
 </a>
 
 </div>
 
+
+<div class="contact-item">
+
+<div class="contact-icon">
+<i data-lucide="map-pin"></i>
+</div>
+
+<span>
+India
+</span>
+
+</div>
+
+
+</div>
+
+
+<!-- CONTACT FORM -->
+
+<form
+class="contact-form reveal"
+action="https://formsubmit.co/ankurkumar0941@gmail.com"
+method="POST">
+
+
+<input
+type="hidden"
+name="_subject"
+value="New Portfolio Website Contact">
+
+
+<input
+type="hidden"
+name="_captcha"
+value="false">
+
+
+<input
+type="hidden"
+name="_template"
+value="table">
+
+
+<input
+type="hidden"
+name="_next"
+value="https://www.google.com/">
+
+
+<div class="field">
+
+<i data-lucide="user"></i>
+
+<input
+type="text"
+name="first_name"
+placeholder="First Name"
+required>
+
+</div>
+
+
+<div class="field">
+
+<i data-lucide="user"></i>
+
+<input
+type="text"
+name="last_name"
+placeholder="Last Name"
+required>
+
+</div>
+
+
+<div class="field">
+
+<i data-lucide="mail"></i>
+
+<input
+type="email"
+name="email"
+placeholder="Email Address"
+required>
+
+</div>
+
+
+<div class="field">
+
+<i data-lucide="building-2"></i>
+
+<input
+type="text"
+name="company"
+placeholder="Company Name">
+
+</div>
+
+
+<div class="field">
+
+<i data-lucide="phone"></i>
+
+<input
+type="tel"
+name="phone"
+placeholder="Contact Number">
+
+</div>
+
+
+<div class="field full">
+
+<i data-lucide="message-square"></i>
+
+<textarea
+name="message"
+placeholder="Your Message"
+required></textarea>
+
+</div>
+
+
+<div class="field full">
+
+<button
+class="submit-btn"
+type="submit">
+
+Send Message
+
+</button>
+
+</div>
+
+
+</form>
 
 </div>
 
@@ -1626,15 +3400,227 @@ View CV
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      FOOTER
-========================= -->
+========================================================= -->
 
 <footer>
 
-© 2026 Ankur Kumar | Automotive & EV Quality Professional
+<div class="container footer-content">
+
+
+<div>
+
+© 2026 Ankur Kumar |
+Automotive & EV Quality Professional
+
+</div>
+
+
+<div class="social-links">
+
+
+<a
+href="https://www.linkedin.com/in/ankur-kumar-831b54103/"
+target="_blank"
+rel="noopener"
+aria-label="LinkedIn">
+
+<i data-lucide="linkedin"></i>
+
+</a>
+
+
+<a
+href="mailto:ankurkumar0941@gmail.com"
+aria-label="Email">
+
+<i data-lucide="mail"></i>
+
+</a>
+
+
+<a
+href="tel:+919461797767"
+aria-label="Phone">
+
+<i data-lucide="phone"></i>
+
+</a>
+
+
+</div>
+
+</div>
 
 </footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   LUCIDE ICONS
+========================================================= */
+
+lucide.createIcons();
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const navLinks =
+document.getElementById("navLinks");
+
+
+menuBtn.addEventListener(
+"click",
+() => {
+
+    navLinks.classList.toggle("show");
+
+});
+
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link => {
+
+    link.addEventListener(
+        "click",
+        () => {
+
+            navLinks.classList.remove("show");
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const observer =
+new IntersectionObserver(
+
+    entries => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add("active");
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:.12
+    }
+
+);
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(element => {
+
+    observer.observe(element);
+
+});
+
+
+/* =========================================================
+   PREMIUM 3D FLOAT EFFECT
+========================================================= */
+
+document
+.querySelectorAll(".float-card")
+.forEach(card => {
+
+
+    card.addEventListener(
+        "mousemove",
+        event => {
+
+            const rect =
+                card.getBoundingClientRect();
+
+
+            const x =
+                event.clientX - rect.left;
+
+
+            const y =
+                event.clientY - rect.top;
+
+
+            const rotateX =
+                ((y / rect.height) - .5) * -3;
+
+
+            const rotateY =
+                ((x / rect.width) - .5) * 3;
+
+
+            card.style.transform =
+                `translateY(-8px)
+                 perspective(900px)
+                 rotateX(${rotateX}deg)
+                 rotateY(${rotateY}deg)`;
+
+        }
+    );
+
+
+    card.addEventListener(
+        "mouseleave",
+        () => {
+
+            card.style.transform = "";
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   NAVBAR SHADOW ON SCROLL
+========================================================= */
+
+window.addEventListener(
+"scroll",
+() => {
+
+    const navbar =
+        document.querySelector(".navbar");
+
+
+    navbar.style.boxShadow =
+
+        window.scrollY > 40
+
+        ? "0 10px 35px rgba(7,32,67,.08)"
+
+        : "none";
+
+});
+
+</script>
+
 
 </body>
 </html>
